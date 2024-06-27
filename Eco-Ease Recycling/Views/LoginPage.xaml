@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eco_Ease_Recycling.Views.LoginPage"
+             Title="LoginPage">
+    <Grid  RowDefinitions=".3*,.7*" BackgroundColor="White">
+        <Grid BackgroundColor="White" Opacity=".6"/>
+        <Grid>
+            <Image Aspect="AspectFit"
+                   HeightRequest="120"
+                   Source="applogo.png"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"/>
+        </Grid>
+        <Grid Grid.Row="1" >
+            <RoundRectangle Margin="-5,-30,-5,-2"
+                            CornerRadius="30,30,0,0"
+                            Fill="White"
+                            Opacity=".5"/>
+            <StackLayout Margin="30,0,30,0">
+                <Label FontAttributes="Bold"
+                       FontFamily="bold"
+                       FontSize="Header"
+                       VerticalTextAlignment="Start"
+                       HorizontalTextAlignment="Center"
+                       Text="Eco-Ease"
+                       TextColor="LimeGreen"/>
+                <Label FontAttributes="Bold"
+                       FontFamily="bold"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Center"
+                       Text="Get Rewarded"
+                       TextColor="LimeGreen"/>
+                <Label FontFamily="AnybodyRegular"
+                       HorizontalTextAlignment="Center"
+                       Text="Login to get started"
+                       TextColor="Gray"/>
+                <Grid Margin="0,30,0,0" >
+                    <Entry
+                     Grid.Column="1"
+                     Placeholder="Username"
+                     PlaceholderColor="LightGrey"
+                     VerticalOptions="Center"/>
+                </Grid>
+                <Grid Margin="0,30,0,0" >
+                    <Entry
+                    Grid.Column="1"
+                    Placeholder="password"
+                    IsPassword="True"
+                    PlaceholderColor="LightGrey"
+                    VerticalOptions="Center"/>
+                </Grid>
+                <Button
+                 Margin="0,20,0,0"
+                 BackgroundColor="LimeGreen"
+                 HeightRequest="40"
+                 Text="Login"/>
+                <Label Margin="0,20,0,0"
+                    HorizontalOptions="Center"
+                    Text="Forgot password?"
+                    TextColor="DarkGreen"
+                    TextDecorations="Underline"/>
+                <Button Margin="0,100,0,0"
+                     BackgroundColor="White"
+                     BorderWidth="1"
+                     BorderColor="Black"
+                     HeightRequest="40"
+                     Text="Create new account"
+                     TextColor="Black"/>
+            </StackLayout>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

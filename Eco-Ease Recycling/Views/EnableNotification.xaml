@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eco_Ease_Recycling.Views.EnableNotification"
+             Title="EnableNotification">
+    <StackLayout>
+        <Grid  BackgroundColor="White">
+            <Grid Margin="0,150,0,0">
+                <Image Aspect="AspectFit"
+                   HeightRequest="250"
+                   Source="noti.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Grid Margin="0,250,0,0">
+                    <Label FontFamily="AnybodyRegular"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Center"
+                       Text="Turn On Notifications?"
+                       TextColor="Black"/>
+                </Grid>
+                <Grid Margin="0,280,0,0">
+                    <Label FontFamily="AnybodyRegular"
+                       HorizontalTextAlignment="Center"
+                       Text="Don't miss important messages"
+                       TextColor="Gray"/>
+                </Grid>
+                  <Button
+                     Margin="0,440,0,0"
+                     BackgroundColor="LimeGreen"
+                     HeightRequest="40"
+                     Text="Enable Notifications"/>
+                  <Button Margin="0,550,0,0"
+                     BackgroundColor="White"
+                     BorderWidth="1"
+                     BorderColor="White"
+                     HeightRequest="40"
+                     Text="Skip"
+                     TextColor="LimeGreen"/>
+            </Grid>
+        </Grid>
+    </StackLayout>
+</ContentPage>

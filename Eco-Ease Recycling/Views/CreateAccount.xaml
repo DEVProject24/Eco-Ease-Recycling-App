@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eco_Ease_Recycling.Views.CreateAccount"
+             Title="CreateAccount">
+    
+    <Grid >
+        <StackLayout Margin="30,30,30,0" >
+            <Label FontAttributes="Bold"
+                   FontFamily="bold"
+                   FontSize="Body"
+                   HorizontalTextAlignment="Start"
+                   Text="&lt; Back"
+                   TextColor="LimeGreen"/>
+            <Label FontFamily="bold"
+                   HorizontalTextAlignment="Start"
+                   Text="Create new account"
+                   TextColor="Black"
+                   FontSize="Medium"/>
+            <Grid Margin="0,10,0,0">
+                <Label FontFamily="AnybodyRegular"
+                       HorizontalTextAlignment="Start"
+                       Text="Username"
+                       TextColor="Gray"/>
+            </Grid>
+            <Grid Margin="0,10,0,0">
+                <Entry
+             Grid.Column="1"
+             Placeholder="Username"
+             PlaceholderColor="LightGrey"
+             VerticalOptions="Center"/>
+            </Grid>
+            <Grid Margin="0,10,0,0">
+                <Label FontFamily="AnybodyRegular"
+                   HorizontalTextAlignment="Start"
+                   Text="Email Address"
+                   TextColor="Gray"/>
+            </Grid>
+            <Grid Margin="0,10,0,0">
+                <Entry
+                 Grid.Column="1"
+                 Placeholder="Email"
+                 PlaceholderColor="LightGrey"
+                 VerticalOptions="Center"/>
+            </Grid>
+            <Grid Margin="0,30,0,0">
+                <Label FontFamily="AnybodyRegular"
+               HorizontalTextAlignment="Start"
+               Text="Password"
+               TextColor="Gray"/>
+                <Label Margin="0,20,0,0" FontFamily="AnybodyRegular"
+                    HorizontalTextAlignment="Start"
+                    Text="-Must be atleast 8 characters in length"
+                    TextColor="Gray"/>
+                <Label Margin="0,40,0,0" FontFamily="AnybodyRegular"
+                    HorizontalTextAlignment="Start"
+                    Text="-Must contain atleast one uppercase"
+                    TextColor="Gray"/>
+                <Label Margin="0,60,0,0" FontFamily="AnybodyRegular"
+                    HorizontalTextAlignment="Start"
+                    Text="-Must contain atleast one lowwercase"
+                    TextColor="Gray"/>
+                <Label Margin="0,80,0,0" FontFamily="AnybodyRegular"
+                    HorizontalTextAlignment="Start"
+                    Text="-Must contain atleast one number"
+                    TextColor="Gray"/>
+                <Label Margin="0,100,0,0" FontFamily="AnybodyRegular"
+                    HorizontalTextAlignment="Start"
+                    Text="-Must contain atleast one special character"
+                    TextColor="Gray"/>
+            </Grid>
+            <Grid Margin="0,10,0,0" >
+                <Entry
+                 Grid.Column="1"
+                 Placeholder="password"
+                 IsPassword="True"
+                 PlaceholderColor="LightGrey"
+                 VerticalOptions="Center"/>
+            </Grid>
+            <Grid Margin="0,10,0,0" >
+                <Entry
+                 Grid.Column="1"
+                 Placeholder="Re-enter password"
+                 IsPassword="True"
+                 PlaceholderColor="LightGrey"
+                 VerticalOptions="Center"/>
+            </Grid>
+            <Button
+             Margin="0,180,0,0"
+             BackgroundColor="LimeGreen"
+             HeightRequest="40"
+             Text="Create Account"/>
+            <Button Margin="0,10,0,0"
+             BackgroundColor="White"
+             BorderWidth="1"
+             BorderColor="White"
+             HeightRequest="40"
+             Text="cancel"
+             TextColor="LimeGreen"/>
+        </StackLayout>
+            
+    </Grid>
+    
+</ContentPage>
