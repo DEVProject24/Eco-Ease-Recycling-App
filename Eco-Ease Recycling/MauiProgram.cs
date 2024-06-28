@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace Eco_Ease_Recycling
 {
@@ -9,10 +10,13 @@ namespace Eco_Ease_Recycling
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .ConfigureSyncfusionCore()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Anybody-Regular.ttf","AnybodyRegular");
+                    fonts.AddFont("AlikeAngular-Regular.ttf","Alike");
                 });
 
 #if DEBUG

@@ -5,98 +5,112 @@
              Title="CreateAccount">
     
     <Grid >
-        <StackLayout Margin="30,30,30,0" >
-            <Label FontAttributes="Bold"
-                   FontFamily="bold"
-                   FontSize="Body"
+        <StackLayout >
+            <Label Margin="16,20"
+                   FontAttributes="Bold"
+                   FontFamily="AnybodyRegular"
+                   FontSize="17"
                    HorizontalTextAlignment="Start"
                    Text="&lt; Back"
-                   TextColor="LimeGreen"/>
-            <Label FontFamily="bold"
+                   TextColor="#22BA43"/>
+            <Label Margin="16,10,0,0"
+                   FontFamily="AnyboyRegular"
+                   FontSize="20"
                    HorizontalTextAlignment="Start"
                    Text="Create new account"
-                   TextColor="Black"
-                   FontSize="Medium"/>
-            <Grid Margin="0,10,0,0">
-                <Label FontFamily="AnybodyRegular"
+                   TextColor="#1A1C29"/>
+            <Grid Margin="16,16,16,0">
+                <Label FontFamily="Alike"
+                       FontSize="15"
                        HorizontalTextAlignment="Start"
                        Text="Username"
-                       TextColor="Gray"/>
+                       TextColor="#797979"/>
             </Grid>
-            <Grid Margin="0,10,0,0">
+            <Grid Margin="16,16,16,0">
                 <Entry
-             Grid.Column="1"
-             Placeholder="Username"
-             PlaceholderColor="LightGrey"
-             VerticalOptions="Center"/>
+                 Grid.Column="1"
+                 BackgroundColor="#F3F3F3"
+                 Placeholder="Username"
+                 PlaceholderColor="#797979"
+                 VerticalOptions="Center"/>
             </Grid>
-            <Grid Margin="0,10,0,0">
-                <Label FontFamily="AnybodyRegular"
+            <Grid Margin="16,16,0,0">
+                <Label FontFamily="Alike"
+                       FontSize="15"
                    HorizontalTextAlignment="Start"
                    Text="Email Address"
                    TextColor="Gray"/>
             </Grid>
-            <Grid Margin="0,10,0,0">
+            <Grid Margin="16,10,16,0">
                 <Entry
                  Grid.Column="1"
+                 BackgroundColor="#F3F3F3"
                  Placeholder="Email"
-                 PlaceholderColor="LightGrey"
+                 PlaceholderColor="#797979"
                  VerticalOptions="Center"/>
             </Grid>
-            <Grid Margin="0,30,0,0">
-                <Label FontFamily="AnybodyRegular"
+            <Grid Margin="16,30,0,0">
+                <Label FontFamily="Alike"
                HorizontalTextAlignment="Start"
                Text="Password"
-               TextColor="Gray"/>
-                <Label Margin="0,20,0,0" FontFamily="AnybodyRegular"
+               TextColor="#797979"/>
+                <Label Margin="0,20,0,0" FontFamily="Alike" FontSize="15"
                     HorizontalTextAlignment="Start"
                     Text="-Must be atleast 8 characters in length"
-                    TextColor="Gray"/>
-                <Label Margin="0,40,0,0" FontFamily="AnybodyRegular"
+                    TextColor="#797979"/>
+                <Label Margin="0,40,0,0" FontFamily="Alike" FontSize="15"
                     HorizontalTextAlignment="Start"
                     Text="-Must contain atleast one uppercase"
-                    TextColor="Gray"/>
-                <Label Margin="0,60,0,0" FontFamily="AnybodyRegular"
+                    TextColor="#797979"/>
+                <Label Margin="0,60,0,0" FontFamily="Alike" FontSize="15"
                     HorizontalTextAlignment="Start"
                     Text="-Must contain atleast one lowwercase"
-                    TextColor="Gray"/>
-                <Label Margin="0,80,0,0" FontFamily="AnybodyRegular"
+                    TextColor="#797979"/>
+                <Label Margin="0,80,0,0" FontFamily="Alike" FontSize="15"
                     HorizontalTextAlignment="Start"
                     Text="-Must contain atleast one number"
-                    TextColor="Gray"/>
-                <Label Margin="0,100,0,0" FontFamily="AnybodyRegular"
+                    TextColor="#797979"/>
+                <Label Margin="0,100,0,0" FontFamily="Alike" FontSize="15"
                     HorizontalTextAlignment="Start"
                     Text="-Must contain atleast one special character"
-                    TextColor="Gray"/>
+                    TextColor="#797979"/>
             </Grid>
-            <Grid Margin="0,10,0,0" >
+            <Grid Margin="16,10,16,0" >
                 <Entry
                  Grid.Column="1"
+                 BackgroundColor="#F3F3F3"
                  Placeholder="password"
                  IsPassword="True"
-                 PlaceholderColor="LightGrey"
+                 PlaceholderColor="#797979"
                  VerticalOptions="Center"/>
             </Grid>
-            <Grid Margin="0,10,0,0" >
+            <Grid Margin="16,10,16,0" >
                 <Entry
                  Grid.Column="1"
+                 BackgroundColor="#F3F3F3"
                  Placeholder="Re-enter password"
                  IsPassword="True"
-                 PlaceholderColor="LightGrey"
+                 PlaceholderColor="#797979"
                  VerticalOptions="Center"/>
             </Grid>
             <Button
-             Margin="0,180,0,0"
-             BackgroundColor="LimeGreen"
-             HeightRequest="40"
+             Margin="16,150,16,0"
+             BackgroundColor="#22BA43"
+             HeightRequest="50"
+             CornerRadius="14"
+             FontFamily="AnybodyRegular"
+             FontSize="16"
              Text="Create Account"/>
-            <Button Margin="0,10,0,0"
+            <Button Margin="16,10,16,0"
              BackgroundColor="White"
              BorderWidth="1"
              BorderColor="White"
-             HeightRequest="40"
+             HeightRequest="17"
+             FontFamily="AnybodyRegular"
+             FontSize="16"
+             CornerRadius="14"
              Text="cancel"
-             TextColor="LimeGreen"/>
+             TextColor="#22BA43"/>
         </StackLayout>
             
     </Grid>

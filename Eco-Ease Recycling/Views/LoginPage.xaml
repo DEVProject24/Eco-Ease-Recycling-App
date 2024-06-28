@@ -3,70 +3,64 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Eco_Ease_Recycling.Views.LoginPage"
              Title="LoginPage">
-    <Grid  RowDefinitions=".3*,.7*" BackgroundColor="White">
+    <Grid  BackgroundColor="White">
         <Grid BackgroundColor="White" Opacity=".6"/>
-        <Grid>
+        <Grid Margin="6,70">
             <Image Aspect="AspectFit"
-                   HeightRequest="120"
-                   Source="applogo.png"
-                   VerticalOptions="CenterAndExpand"
+                   HeightRequest="339"
+                   WidthRequest="378"
+                   Source="logo2.png"
+                   VerticalOptions="Start"
                    HorizontalOptions="Center"/>
         </Grid>
         <Grid Grid.Row="1" >
-            <RoundRectangle Margin="-5,-30,-5,-2"
-                            CornerRadius="30,30,0,0"
-                            Fill="White"
-                            Opacity=".5"/>
             <StackLayout Margin="30,0,30,0">
-                <Label FontAttributes="Bold"
-                       FontFamily="bold"
-                       FontSize="Header"
-                       VerticalTextAlignment="Start"
-                       HorizontalTextAlignment="Center"
-                       Text="Eco-Ease"
-                       TextColor="LimeGreen"/>
-                <Label FontAttributes="Bold"
-                       FontFamily="bold"
-                       FontSize="Medium"
-                       HorizontalTextAlignment="Center"
-                       Text="Get Rewarded"
-                       TextColor="LimeGreen"/>
-                <Label FontFamily="AnybodyRegular"
-                       HorizontalTextAlignment="Center"
-                       Text="Login to get started"
-                       TextColor="Gray"/>
-                <Grid Margin="0,30,0,0" >
+                <Grid Margin="0,422,0,0" >
                     <Entry
                      Grid.Column="1"
+                     BackgroundColor="WhiteSmoke"
                      Placeholder="Username"
-                     PlaceholderColor="LightGrey"
+                     FontFamily="AnybodyRegular"
+                     FontSize="16"
+                     HeightRequest="54"
+                     PlaceholderColor="DarkGray"
                      VerticalOptions="Center"/>
                 </Grid>
                 <Grid Margin="0,30,0,0" >
                     <Entry
                     Grid.Column="1"
+                    BackgroundColor="WhiteSmoke"
                     Placeholder="password"
+                    FontFamily="AnybodyRegular"
+                    FontSize="16"
+                    HeightRequest="54"
                     IsPassword="True"
-                    PlaceholderColor="LightGrey"
+                    PlaceholderColor="DarkGray"
                     VerticalOptions="Center"/>
                 </Grid>
                 <Button
                  Margin="0,20,0,0"
                  BackgroundColor="LimeGreen"
-                 HeightRequest="40"
-                 Text="Login"/>
+                 HeightRequest="54"
+                 FontSize="16"
+                 FontFamily="AnybodyRegular"
+                 Text="Log in"/>
                 <Label Margin="0,20,0,0"
                     HorizontalOptions="Center"
                     Text="Forgot password?"
-                    TextColor="DarkGreen"
+                    TextColor="#31653D"
+                    FontSize="16"
+                    FontFamily="AnybodyRegular"
                     TextDecorations="Underline"/>
-                <Button Margin="0,100,0,0"
+                <Button Margin="0,90,0,0"
                      BackgroundColor="White"
                      BorderWidth="1"
-                     BorderColor="Black"
+                     BorderColor="#242B19"
                      HeightRequest="40"
+                     FontSize="16"
+                     FontFamily="AnybodyRegular"
                      Text="Create new account"
-                     TextColor="Black"/>
+                     TextColor="#121211"/>
             </StackLayout>
 
         </Grid>
