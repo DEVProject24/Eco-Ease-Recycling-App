@@ -7,29 +7,34 @@
         <Grid  BackgroundColor="White">
             <Grid Margin="0,150,0,0">
                 <Image Aspect="AspectFit"
-               HeightRequest="200"
-               Source="login.png"
-               VerticalOptions="Start"
-               HorizontalOptions="Center"/>
-                <Grid Margin="0,250,0,0">
+                   HeightRequest="181"
+                   WidthRequest="210"
+                   Source="login.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Grid Margin="0,-150,0,0">
                     <Label FontFamily="AnybodyRegular"
-                   FontSize="Medium"
-                   HorizontalTextAlignment="Center"
-                   Text="You have successfully created an account!"
-                   TextColor="Black"/>
-                </Grid>
-                <Grid Margin="0,280,0,0">
-                    <Label FontFamily="AnybodyRegular"
-                   HorizontalTextAlignment="Center"
-                   Text="Welcome to Eco-Ease,log into your account and start recycling"
-                   TextColor="Gray"/>
+                       FontSize="20"
+                       HeightRequest="42"
+                       WidthRequest="215"
+                       HorizontalTextAlignment="Center"
+                       Text="You have successfully created an account!"
+                       TextColor="Black"/>
+                    <Label Margin="0,100,0,0"
+                       FontFamily="Alike"
+                       FontSize="15"
+                       HeightRequest="42"
+                       WidthRequest="237"
+                       HorizontalTextAlignment="Center"
+                       Text="Welcome to Eco-Ease,log into your account and start recycling"
+                       TextColor="Gray"/>
                 </Grid>
                 <Button
-                 Margin="0,540,0,0"
-                 BackgroundColor="LimeGreen"
-                 HeightRequest="40"
-                 Text="Login"/>
-                
+                 Margin="0,520,0,0"
+                 BackgroundColor="#22BA43"
+                 HeightRequest="54"
+                 WidthRequest="358"
+                 Text="Log In"/>
             </Grid>
         </Grid>
     </StackLayout>

@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Eco_Ease_Recycling.Views.LoginPage"
              Title="LoginPage">
-    <Grid  BackgroundColor="White">
-        <Grid BackgroundColor="White" Opacity=".6"/>
-        <Grid Margin="6,70">
+    <Grid  BackgroundColor="#FFFFFF">
+        <Grid BackgroundColor="#FFFFFF" Opacity=".6"/>
+        <Grid Margin="6,100,0,0">
             <Image Aspect="AspectFit"
                    HeightRequest="339"
                    WidthRequest="378"
@@ -13,34 +13,51 @@
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
         </Grid>
+        <Grid Margin="-100,-565,0,40">
+            <Image Aspect="AspectFit"
+                   HeightRequest="213"
+                   WidthRequest="224"
+                   Source="circle1.png"
+                   HorizontalOptions="Start"/>
+        </Grid>
         <Grid Grid.Row="1" >
             <StackLayout Margin="30,0,30,0">
-                <Grid Margin="0,422,0,0" >
-                    <Entry
-                     Grid.Column="1"
-                     BackgroundColor="WhiteSmoke"
-                     Placeholder="Username"
-                     FontFamily="AnybodyRegular"
-                     FontSize="16"
-                     HeightRequest="54"
-                     PlaceholderColor="DarkGray"
-                     VerticalOptions="Center"/>
+                <Grid Margin="0,400,0,0" >
+                    <Border Stroke="#797979" StrokeThickness="0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="14,14,14,14" />
+                        </Border.StrokeShape>
+                        <Entry
+                         Grid.Column="1"
+                         BackgroundColor="#F3F3F3"
+                         Placeholder=" Username"
+                         FontFamily="AnybodyRegular"
+                         FontSize="16"
+                         HeightRequest="54"
+                         PlaceholderColor="#797979"
+                         VerticalOptions="Center"/>
+                    </Border>
                 </Grid>
-                <Grid Margin="0,30,0,0" >
-                    <Entry
-                    Grid.Column="1"
-                    BackgroundColor="WhiteSmoke"
-                    Placeholder="password"
-                    FontFamily="AnybodyRegular"
-                    FontSize="16"
-                    HeightRequest="54"
-                    IsPassword="True"
-                    PlaceholderColor="DarkGray"
-                    VerticalOptions="Center"/>
+                <Grid Margin="0,10,0,0" >
+                    <Border Stroke="#797979" StrokeThickness="0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="14,14,14,14" />
+                        </Border.StrokeShape>
+                        <Entry
+                            Grid.Column="1"
+                            BackgroundColor="#F3F3F3"
+                            Placeholder=" Password"
+                            FontFamily="AnybodyRegular"
+                            FontSize="16"
+                            HeightRequest="54"
+                            IsPassword="True"
+                            PlaceholderColor="#797979"
+                            VerticalOptions="Center"/>
+                    </Border>
                 </Grid>
                 <Button
                  Margin="0,20,0,0"
-                 BackgroundColor="LimeGreen"
+                 BackgroundColor="#22BA43"
                  HeightRequest="54"
                  FontSize="16"
                  FontFamily="AnybodyRegular"
@@ -51,12 +68,13 @@
                     TextColor="#31653D"
                     FontSize="16"
                     FontFamily="AnybodyRegular"
-                    TextDecorations="Underline"/>
-                <Button Margin="0,90,0,0"
+                    TextDecorations="None"/>
+                <Button Margin="0,80,0,0"
                      BackgroundColor="White"
                      BorderWidth="1"
                      BorderColor="#242B19"
                      HeightRequest="40"
+                     WidthRequest="358"
                      FontSize="16"
                      FontFamily="AnybodyRegular"
                      Text="Create new account"

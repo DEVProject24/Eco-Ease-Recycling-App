@@ -17,6 +17,7 @@ namespace Eco_Ease_Recycling
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                     fonts.AddFont("Anybody-Regular.ttf","AnybodyRegular");
                     fonts.AddFont("AlikeAngular-Regular.ttf","Alike");
+                    fonts.AddFont("AnekBangla-SemiBold", "Aneksemi");
                 });
 
 #if DEBUG
@@ -24,6 +25,7 @@ namespace Eco_Ease_Recycling
 #endif
 
             return builder.Build();
+
         }
     }
 }

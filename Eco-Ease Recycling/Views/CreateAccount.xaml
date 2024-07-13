@@ -3,17 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Eco_Ease_Recycling.Views.CreateAccount"
              Title="CreateAccount">
-    
+
     <Grid >
         <StackLayout >
-            <Label Margin="16,20"
+            <Grid Margin="16,20,0,0">
+                <Image Aspect="AspectFit"
+                    HeightRequest="27"
+                    WidthRequest="17"
+                    Source="back.png"
+                    HorizontalOptions="Start"/>
+                <Label Margin="16,20"
                    FontAttributes="Bold"
                    FontFamily="AnybodyRegular"
                    FontSize="17"
                    HorizontalTextAlignment="Start"
-                   Text="&lt; Back"
+                   Text=" Back"
                    TextColor="#22BA43"/>
-            <Label Margin="16,10,0,0"
+            </Grid>
+            <Label Margin="16,2,0,0"
                    FontFamily="AnyboyRegular"
                    FontSize="20"
                    HorizontalTextAlignment="Start"
@@ -27,12 +34,17 @@
                        TextColor="#797979"/>
             </Grid>
             <Grid Margin="16,16,16,0">
-                <Entry
-                 Grid.Column="1"
-                 BackgroundColor="#F3F3F3"
-                 Placeholder="Username"
-                 PlaceholderColor="#797979"
-                 VerticalOptions="Center"/>
+                <Border Stroke="#797979" StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="45,45,45,45" />
+                    </Border.StrokeShape>
+                    <Entry
+                     Grid.Column="1"
+                     BackgroundColor="#F3F3F3"
+                     Placeholder=" Username"
+                     PlaceholderColor="#797979"
+                     VerticalOptions="Center"/>
+                </Border>
             </Grid>
             <Grid Margin="16,16,0,0">
                 <Label FontFamily="Alike"
@@ -42,12 +54,17 @@
                    TextColor="Gray"/>
             </Grid>
             <Grid Margin="16,10,16,0">
-                <Entry
-                 Grid.Column="1"
-                 BackgroundColor="#F3F3F3"
-                 Placeholder="Email"
-                 PlaceholderColor="#797979"
-                 VerticalOptions="Center"/>
+                <Border Stroke="#797979" StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="45,45,45,45" />
+                    </Border.StrokeShape>
+                    <Entry
+                     Grid.Column="1"
+                     BackgroundColor="#F3F3F3"
+                     Placeholder=" Email"
+                     PlaceholderColor="#797979"
+                     VerticalOptions="Center"/>
+                </Border>
             </Grid>
             <Grid Margin="16,30,0,0">
                 <Label FontFamily="Alike"
@@ -76,22 +93,33 @@
                     TextColor="#797979"/>
             </Grid>
             <Grid Margin="16,10,16,0" >
-                <Entry
-                 Grid.Column="1"
-                 BackgroundColor="#F3F3F3"
-                 Placeholder="password"
-                 IsPassword="True"
-                 PlaceholderColor="#797979"
-                 VerticalOptions="Center"/>
+                <Border Stroke="#797979" StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="45,45,45,45" />
+                    </Border.StrokeShape>
+                    <Entry
+                     Grid.Column="1"
+                     BackgroundColor="#F3F3F3"
+                     Placeholder=" Password"
+                     IsPassword="True"
+                     MaxLength="14"
+                     PlaceholderColor="#797979"
+                     VerticalOptions="Center"/>
+                </Border>
             </Grid>
             <Grid Margin="16,10,16,0" >
-                <Entry
-                 Grid.Column="1"
-                 BackgroundColor="#F3F3F3"
-                 Placeholder="Re-enter password"
-                 IsPassword="True"
-                 PlaceholderColor="#797979"
-                 VerticalOptions="Center"/>
+                <Border Stroke="#797979" StrokeThickness="0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="45,45,45,45" />
+                    </Border.StrokeShape>
+                    <Entry
+                     Grid.Column="1"
+                     BackgroundColor="#F3F3F3"
+                     Placeholder=" Re-enter password"
+                     IsPassword="True"
+                     PlaceholderColor="#797979"
+                     VerticalOptions="Center"/>
+                </Border>
             </Grid>
             <Button
              Margin="16,150,16,0"

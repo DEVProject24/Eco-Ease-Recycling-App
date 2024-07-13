@@ -19,21 +19,27 @@
                        TextColor="Black"/>
                 </Grid>
                 <Grid Margin="0,280,0,0">
-                    <Label FontFamily="AnybodyRegular"
+                    <Label FontFamily="Alike"
                        HorizontalTextAlignment="Center"
-                       Text="Don't miss important messages"
+                       WidthRequest="249"
+                       FontSize="15"
+                       Text="Don’t miss important messages like check-in details and account activity."
                        TextColor="Gray"/>
                 </Grid>
                   <Button
                      Margin="0,440,0,0"
                      BackgroundColor="LimeGreen"
-                     HeightRequest="40"
+                     HeightRequest="54"
+                     WidthRequest="358"
+                     FontSize="16"
                      Text="Enable Notifications"/>
                   <Button Margin="0,550,0,0"
                      BackgroundColor="White"
                      BorderWidth="1"
                      BorderColor="White"
-                     HeightRequest="40"
+                     HeightRequest="54"
+                     WidthRequest="358"
+                     FontSize="16"
                      Text="Skip"
                      TextColor="LimeGreen"/>
             </Grid>

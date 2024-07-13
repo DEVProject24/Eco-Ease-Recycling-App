@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             x:Class="Eco_Ease_Recycling.Views.OneTimePin"
+             Title="OneTimePin">
+    <Grid >
+        <Grid Margin="16,2,0,0">
+                <Image Aspect="AspectFit"
+                HeightRequest="27"
+                WidthRequest="17"
+                Source="back.png"
+                HorizontalOptions="Start"/>
+                <Label Margin="16,20"
+               FontAttributes="Bold"
+               FontFamily="AnybodyRegular"
+               FontSize="17"
+               HorizontalTextAlignment="Start"
+               Text=" Back"
+               TextColor="#22BA43"/>
+            </Grid>
+            <Grid Margin="16,10,0,0">
+                <Image Aspect="AspectFit"
+               HeightRequest="40"
+               WidthRequest="40"
+               Source="lockicon.png"
+               VerticalOptions="Start"
+               HorizontalOptions="Start"/>
+                <Label Margin="9,50,0,25" 
+                   FontFamily="AnybodyRegular"
+                   HeightRequest="25"
+                   Text="Forgot your password?"
+                   TextColor="#1A1C29"
+                   FontSize="20"/>
+                <Label Margin="9,80,0,0"
+                   FontFamily="Alike"
+                   HorizontalTextAlignment="Start"
+                   FontSize="15"
+                   HeightRequest="20"
+                   Text="Enter the email associated with your account"
+                   TextColor="Gray"/>
+            </Grid>
+            <Grid Margin="16,20,16,0">
+                <inputLayout:SfTextInputLayout ContainerBackground="#F3F3F3" ContainerType="Outlined" Stroke="#22BA43" FocusedStrokeThickness="3" OutlineCornerRadius="14" >
+                    <Entry
+                 BackgroundColor="#F3F3F3"
+                 Placeholder="Email Address"
+                 PlaceholderColor="DarkGrey"
+                 FontFamily="Alike"
+                 HeightRequest="10"
+                 WidthRequest="358"
+                 VerticalOptions="Center"/>
+                </inputLayout:SfTextInputLayout>
+            </Grid>
+    </Grid>
+</ContentPage>
