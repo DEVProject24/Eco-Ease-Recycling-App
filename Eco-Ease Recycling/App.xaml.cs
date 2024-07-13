@@ -8,7 +8,7 @@ namespace Eco_Ease_Recycling
         {
             InitializeComponent();
 
-            MainPage = new Splashpage3();
+            MainPage = new Splashpage2();
         }
     }
 }

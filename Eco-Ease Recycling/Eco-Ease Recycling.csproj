@@ -82,7 +82,7 @@
 	  <MauiXaml Update="Views\Splashpage1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\splashpage2.xaml">
+	  <MauiXaml Update="Views\Splashpage2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Splashpage3.xaml">

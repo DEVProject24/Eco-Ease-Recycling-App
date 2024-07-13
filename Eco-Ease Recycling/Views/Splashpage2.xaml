@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eco_Ease_Recycling.Views.Splashpage2"
+             Title="Splashpage2">
+    <Grid >
+        <Image Margin="390,800"
+       Aspect="AspectFill"
+       HeightRequest="850"
+       WidthRequest="400"
+       Source="splash2.png"/>
+        <Label Margin="37,60"
+       FontFamily="Aneksemi"
+       FontAttributes="Bold"
+       FontSize="32"
+       HorizontalTextAlignment="Center"
+       Text="Recycling guidelines"
+       TextColor="#9BFFAB"/>
+        <Label Margin="0,540,10,0"
+       FontFamily="OpenSansRegular"
+       WidthRequest="358"
+       HorizontalTextAlignment="Center"
+       VerticalTextAlignment="Center"
+       FontSize="20"
+       Padding="2"
+       Text="Recieve daily tips on Recycling-How to recycle better and the benefits of recycling"
+       TextColor="#FFFFFF"/>
+        <Button
+         Margin="185,680,0,0"
+         BackgroundColor="#22BA43"
+         HeightRequest="54"
+         WidthRequest="173" 
+         CornerRadius="14"
+         FontFamily="AnybodyRegular"
+         FontSize="16"
+         Text="Sign Up"/>
+        <Button
+         Margin="0,680,185,0"
+         BackgroundColor="#00FFFFFF"
+         BorderColor="White"
+         BorderWidth="2"
+         HeightRequest="54"
+         WidthRequest="173" 
+         CornerRadius="14"
+         FontFamily="AnybodyRegular"
+         FontSize="16"
+         Text="Log In"/>
+    </Grid>
+</ContentPage>
