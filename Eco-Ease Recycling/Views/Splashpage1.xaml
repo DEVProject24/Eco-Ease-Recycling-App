@@ -7,9 +7,10 @@
     <Grid >
         <Image Margin="390,884"
                Aspect="AspectFill"
-               HeightRequest="850"
+               HeightRequest="800"
                WidthRequest="400"
-               Source="splash1.png"/>
+               HorizontalOptions="Center"
+               Source="splash12.png"/>
         <Label Margin="37,60"
                FontFamily="Aneksemi"
                FontAttributes="Bold"

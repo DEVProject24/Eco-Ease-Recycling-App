@@ -88,6 +88,12 @@
 	  <MauiXaml Update="Views\Splashpage3.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Splashpage4.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Splashpage5.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\SuccessfulLogin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

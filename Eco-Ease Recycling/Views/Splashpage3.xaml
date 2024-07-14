@@ -17,14 +17,14 @@
            HorizontalTextAlignment="Center"
            Text="Location"
            TextColor="#9BFFAB"/>
-        <Label Margin="0,540,10,0"
+        <Label Margin="0,500,10,0"
            FontFamily="OpenSansRegular"
            WidthRequest="358"
            HorizontalTextAlignment="Center"
            VerticalTextAlignment="Center"
            FontSize="20"
            Padding="2"
-           Text="Find the nearest Mpact recycling center near you"
+           Text="get rewarded  when you recycle"
            TextColor="#FFFFFF"/>
         <Button
              Margin="185,680,0,0"
