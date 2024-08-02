@@ -5,10 +5,10 @@
              Title="Splashpage4">
     <Grid >
         <Image Margin="390,800"
-       Aspect="AspectFill"
-       HeightRequest="850"
-       WidthRequest="400"
-       Source="splash4.png"/>
+                Aspect="AspectFill"
+                HeightRequest="850"
+                WidthRequest="400"
+                Source="splash4.png"/>
         <Label Margin="37,30"
        FontFamily="Aneksemi"
        FontAttributes="Bold"
@@ -17,14 +17,15 @@
        Text="Earn Points"
        TextColor="#9BFFAB"/>
         <Label Margin="0,500,10,0"
-       FontFamily="OpenSansRegular"
-       WidthRequest="358"
-       HorizontalTextAlignment="Center"
-       VerticalTextAlignment="Center"
-       FontSize="20"
-       Padding="2"
-       Text="Find the nearest Mpact recycling center near you"
-       TextColor="#FFFFFF"/>
+               FontFamily="OpenSansRegular"
+               WidthRequest="358"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               FontSize="20"
+               Padding="2"
+               Text="Find the nearest Mpact recycling center near you"
+               TextColor="#FFFFFF"/>
         <Button
          Margin="185,680,0,0"
          BackgroundColor="#22BA43"

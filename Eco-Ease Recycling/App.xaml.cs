@@ -8,7 +8,7 @@ namespace Eco_Ease_Recycling
         {
             InitializeComponent();
 
-            MainPage = new  ForgotPassword();
+            MainPage = new  Homepage();
         }
     }
 }
