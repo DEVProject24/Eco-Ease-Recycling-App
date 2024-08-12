@@ -8,7 +8,14 @@ namespace Eco_Ease_Recycling
         {
             InitializeComponent();
 
-            MainPage = new  Homepage();
+            MainPage = new  AppShell();
+        }
+
+        protected override async void OnStart()
+        {
+            await Shell.Current.GoToAsync("//LoginPage");
+
+            base.OnStart();
         }
     }
 }

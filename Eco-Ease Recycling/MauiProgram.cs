@@ -1,5 +1,12 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Eco_Ease_Recycling.ViewModels;
+using Eco_Ease_Recycling.Views;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
+using Firebase.Database;
+using Eco_Ease_Recycling.Views;
+using Firebase.Auth;
+//using Windows.Devices.Spi.Provider;
+using Firebase.Auth.Providers;
 
 namespace Eco_Ease_Recycling
 {
@@ -23,6 +30,31 @@ namespace Eco_Ease_Recycling
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+
+            builder.Services.AddSingleton(new FirebaseClient("https://eco-ease-5e1f9-default-rtdb.firebaseio.com/"));
+            builder.Services.AddSingleton(new FirebaseAuthClient(new FirebaseAuthConfig()
+            {
+
+                ApiKey = "AIzaSyB3Tzx-BUz15FmXd2fDEyr7YuPUB6HbmMU",
+                AuthDomain = "eco-ease-5e1f9.firebaseapp.com",
+                Providers = [new EmailProvider()]
+                
+            }));
+
+
+            builder.Services.AddSingleton<CreateAccount>();
+            builder.Services.AddSingleton<CreateAccountViewModel>();
+            builder.Services.AddSingleton<Homepage>();
+            builder.Services.AddSingleton<LoginPageViewModel>();
+            builder.Services.AddSingleton<LoginPage>();
+            builder.Services.AddSingleton<HomePageViewModel>();
+            builder.Services.AddSingleton<Homepage>();
+            builder .Services.AddSingleton<LoadingPage>();
+            builder .Services.AddSingleton<LoadingPageViewModel>();
+
+            
+
+
 
             return builder.Build();
 
