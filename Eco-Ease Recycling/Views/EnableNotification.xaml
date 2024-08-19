@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Eco_Ease_Recycling.Views.EnableNotification"
-             Title="EnableNotification">
+             Title="EnableNotification"
+             Shell.NavBarIsVisible="False">
     <StackLayout>
         <Grid  BackgroundColor="White">
             <Grid Margin="0,150,0,0">
@@ -32,6 +33,7 @@
                      HeightRequest="54"
                      WidthRequest="358"
                      FontSize="16"
+                     Command="{Binding NavigatetoSignInCommand}"
                      Text="Enable Notifications"/>
                   <Button Margin="0,550,0,0"
                      BackgroundColor="White"
@@ -41,6 +43,7 @@
                      WidthRequest="358"
                      FontSize="16"
                      Text="Skip"
+                     Command="{Binding NavigatetoSignInCommand}"
                      TextColor="LimeGreen"/>
             </Grid>
         </Grid>

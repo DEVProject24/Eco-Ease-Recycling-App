@@ -6,7 +6,12 @@ using Firebase.Database;
 using Firebase.Auth;
 //using Windows.Devices.Spi.Provider;
 using Firebase.Auth.Providers;
+<<<<<<< HEAD
 using ZXing.Net.Maui.Controls;
+=======
+using Location = Eco_Ease_Recycling.Views.Location;
+//using System.Windows.Networking.NetworkOperators;
+>>>>>>> Location page
 
 namespace Eco_Ease_Recycling
 {
@@ -17,6 +22,7 @@ namespace Eco_Ease_Recycling
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiMaps()
                 .ConfigureSyncfusionCore()
                 .ConfigureFonts(fonts =>
                 {
@@ -52,6 +58,9 @@ namespace Eco_Ease_Recycling
             builder.Services.AddSingleton<Homepage>();
             builder .Services.AddSingleton<LoadingPage>();
             builder .Services.AddSingleton<LoadingPageViewModel>();
+            builder .Services.AddSingleton<EnableNotification>();
+            builder.Services.AddSingleton<SuccessfulLogin>();
+            builder.Services.AddSingleton<Location>();
 
             
 

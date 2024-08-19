@@ -34,6 +34,7 @@
                  BackgroundColor="#22BA43"
                  HeightRequest="54"
                  WidthRequest="358"
+                 Command="{Binding NavigatetoLoginCommand}"
                  Text="Log In"/>
             </Grid>
         </Grid>

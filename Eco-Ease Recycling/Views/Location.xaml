@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eco_Ease_Recycling.Views.Location"
+             Title="Location"
+             Shell.NavBarIsVisible="False">
+
+    <maps:Map x:Name ="map"  IsShowingUser="True">
+        <maps:Map.ItemTemplate>
+            <DataTemplate x:DataType="maps:Pin">
+                <maps:Pin Location="{Binding Location}"
+                          Address="{Binding Address}"
+                          Label="{Binding Label}"/>
+            </DataTemplate>
+        </maps:Map.ItemTemplate>
+    </maps:Map>
+</ContentPage>

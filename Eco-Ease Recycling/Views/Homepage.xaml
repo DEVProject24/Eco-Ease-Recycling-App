@@ -2,8 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Eco_Ease_Recycling.Views.Homepage"
+<<<<<<< HEAD
              Shell.NavBarIsVisible="False"
              Title="Homepage">
+=======
+             Title="Homepage"
+             Shell.NavBarIsVisible="False">
+>>>>>>> Location page
     <VerticalStackLayout>
         <Grid BackgroundColor="White" Margin="25,25,0,0" >
             <Label 
@@ -158,11 +163,12 @@
                     WidthRequest="31.26"
                     VerticalOptions="Start" 
                     HorizontalOptions="Start" />
-            <Image Margin="-150,615,0,0"
+            <ImageButton Margin="-150,615,0,0"
                    Aspect="AspectFit"
                    HeightRequest="27"
                    WidthRequest="27"
                    Source="map.png"
+                   Clicked="ImageButton_Clicked"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label  Margin="111,643,0,0"

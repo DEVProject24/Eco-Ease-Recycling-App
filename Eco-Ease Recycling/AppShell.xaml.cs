@@ -11,6 +11,7 @@ namespace Eco_Ease_Recycling
             Routing.RegisterRoute(nameof(CreateAccount), typeof(CreateAccount));
            
            Routing.RegisterRoute(nameof(Homepage), typeof(Homepage));
+           Routing.RegisterRoute(nameof(Views.Location), typeof(Views.Location));
         }
     }
 }

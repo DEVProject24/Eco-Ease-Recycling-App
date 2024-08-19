@@ -34,7 +34,7 @@ namespace Eco_Ease_Recycling.ViewModels
 
                 if (!string.IsNullOrWhiteSpace(result?.User?.Info?.Email))
                 {
-                    await Shell.Current.GoToAsync($"//{nameof(LoginPage)}", true);
+                    await Shell.Current.GoToAsync($"//{nameof(EnableNotification)}", true);
                 }
             }
             catch (Exception ex)
