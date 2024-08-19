@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eco_Ease_Recycling.Views.QRScan"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls">
+
+    <VerticalStackLayout>
+        <Grid BackgroundColor="White" Margin="25,25,0,0" >
+            <Label 
+                    Text="Scan QR Code"
+                    FontSize="24"
+                    TextColor="#2DCC70"
+                    FontAttributes="Bold"
+                    WidthRequest="228"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" />
+            <Label Margin="-10,90,0,0"
+                   Text="Scan the QR code on your mpact slip."
+                   HorizontalOptions="Center"
+                   FontSize="16"
+                   TextColor="#000000"/>
+        </Grid>
+        <Grid>
+            <RoundRectangle Margin="27,446,0,0"
+               Fill="#CAFF59"
+               StrokeThickness="4"
+               WidthRequest="334"
+               HeightRequest="55"
+               StrokeLineCap="Round"
+               CornerRadius="25"
+               HorizontalOptions="Start"/>
+            <Image Margin="-269,540,0,0"
+               Aspect="AspectFit"
+               HeightRequest="22"
+               WidthRequest="22"
+               Source="tip.png"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"/>
+            <Image Margin="-300,615,0,0"
+                   Aspect="AspectFit"
+                   HeightRequest="22"
+                   WidthRequest="22"
+                   Source="user.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            <Label Margin="35,643,0,0"
+                Text="Profile"
+                FontSize="8"
+                TextColor="#000000"
+                WidthRequest="31.26"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" />
+            <Image Margin="-150,615,0,0"
+               Aspect="AspectFit"
+               HeightRequest="27"
+               WidthRequest="27"
+               Source="map.png"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"/>
+            <Label Margin="111,643,0,0"
+                Text="Map"
+                FontSize="8"
+                TextColor="#000000"
+                WidthRequest="31.26"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
+        <Ellipse Margin="167,580,0,0"
+                 Stroke="#9BFFAB"
+                 Fill="#9BFFAB"
+                 StrokeThickness="2"
+                 WidthRequest="58.16"
+                 HeightRequest="57.21"
+                 HorizontalOptions="Start" />
+        <Image Margin="0,585,0,0"
+               Aspect="AspectFit"
+               HeightRequest="50.81"
+               WidthRequest="35"
+               Source="home.png"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"/>
+        <Label  Margin="185,613,0,0"
+                Text="Home"
+                FontSize="8"
+                FontAttributes="Bold"
+                TextColor="#000000"
+                WidthRequest="31.26"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
+        <Image Margin="150,615,0,0"
+               Aspect="AspectFit"
+               HeightRequest="26"
+               WidthRequest="26"
+               Source="trophy.png"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"/>
+        <Label  Margin="258,643,0,0"
+                Text="Reward"
+                FontSize="8"
+                TextColor="#000000"
+                WidthRequest="31.26"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
+        <Image Margin="300,615,0,0"
+               Aspect="AspectFit"
+               HeightRequest="25"
+               WidthRequest="25"
+               Source="scan.png"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"/>
+        <Label  Margin="330,643,0,0"
+                Text="QR Scan"
+                FontSize="8"
+                TextColor="#000000"
+                WidthRequest="31.26"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
+        <zxing:CameraBarcodeReaderView Margin="25,60,25,200"
+               x:Name="barcodeReader"
+               BarcodesDetected="barcodeReader_BarcodesDetected"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

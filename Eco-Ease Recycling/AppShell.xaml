@@ -9,7 +9,6 @@
     Title="Eco_Ease_Recycling">
 
     
-    
     <ShellContent
         Title="LoginPage"
         ContentTemplate="{DataTemplate views:LoginPage}"
@@ -20,6 +19,7 @@
     ContentTemplate="{DataTemplate views:Homepage}"
     Route="Homepage" />
 
+
     <ShellContent
    Title="CreateAccount"
    ContentTemplate="{DataTemplate views:CreateAccount}"
@@ -29,5 +29,11 @@
     Title="LoadingPage"
     ContentTemplate="{DataTemplate views:LoadingPage}"
     Route="LoadingPage" />
+
+    <ShellContent 
+        Title="QR Scan"
+        ContentTemplate="{DataTemplate views:QRScan}"
+        Route="QR scan"/>
+
 
 </Shell>

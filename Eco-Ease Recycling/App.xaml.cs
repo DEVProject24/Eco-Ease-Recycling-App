@@ -1,4 +1,5 @@
-﻿using Eco_Ease_Recycling.Views;
+﻿using Eco_Ease_Recycling.ViewModels;
+using Eco_Ease_Recycling.Views;
 
 namespace Eco_Ease_Recycling
 {

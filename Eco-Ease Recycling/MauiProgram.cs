@@ -3,10 +3,10 @@ using Eco_Ease_Recycling.Views;
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 using Firebase.Database;
-using Eco_Ease_Recycling.Views;
 using Firebase.Auth;
 //using Windows.Devices.Spi.Provider;
 using Firebase.Auth.Providers;
+using ZXing.Net.Maui.Controls;
 
 namespace Eco_Ease_Recycling
 {
@@ -25,10 +25,11 @@ namespace Eco_Ease_Recycling
                     fonts.AddFont("Anybody-Regular.ttf","AnybodyRegular");
                     fonts.AddFont("AlikeAngular-Regular.ttf","Alike");
                     fonts.AddFont("AnekBangla-SemiBold", "Aneksemi");
-                });
+                })
+                .UseBarcodeReader();
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             builder.Services.AddSingleton(new FirebaseClient("https://eco-ease-5e1f9-default-rtdb.firebaseio.com/"));
@@ -41,7 +42,7 @@ namespace Eco_Ease_Recycling
                 
             }));
 
-
+            builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<CreateAccount>();
             builder.Services.AddSingleton<CreateAccountViewModel>();
             builder.Services.AddSingleton<Homepage>();

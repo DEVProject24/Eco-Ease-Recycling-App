@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Eco_Ease_Recycling.Views.Homepage"
+             Shell.NavBarIsVisible="False"
              Title="Homepage">
     <VerticalStackLayout>
         <Grid BackgroundColor="White" Margin="25,25,0,0" >

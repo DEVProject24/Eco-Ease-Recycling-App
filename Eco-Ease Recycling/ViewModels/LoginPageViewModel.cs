@@ -13,10 +13,12 @@ namespace Eco_Ease_Recycling.ViewModels
 {
     public partial class LoginPageViewModel : ObservableObject
     {
+        
         private readonly FirebaseAuthClient _firebaseAuthClient;
 
         [ObservableProperty]
-        private LoginPageModel _loginPageModel = new();
+        private LoginPageModel _loginPageModel = new ();
+        
 
         [ObservableProperty]
         private string _errorMessage;
@@ -30,8 +32,7 @@ namespace Eco_Ease_Recycling.ViewModels
         {
             try
             {
-                var result = await _firebaseAuthClient.SignInWithEmailAndPasswordAsync(
-               _loginPageModel.Email, _loginPageModel.Password);
+                var result = await _firebaseAuthClient.SignInWithEmailAndPasswordAsync(_loginPageModel.Email, _loginPageModel.Password);
                 if (!string.IsNullOrWhiteSpace(result?.User?.Info?.Email))
                 {
                     await Shell.Current.GoToAsync($"//{nameof(Homepage)}");
