@@ -2,13 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Eco_Ease_Recycling.Views.Homepage"
-<<<<<<< HEAD
              Shell.NavBarIsVisible="False"
              Title="Homepage">
-=======
-             Title="Homepage"
-             Shell.NavBarIsVisible="False">
->>>>>>> Location page
+
     <VerticalStackLayout>
         <Grid BackgroundColor="White" Margin="25,25,0,0" >
             <Label 

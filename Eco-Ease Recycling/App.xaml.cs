@@ -1,10 +1,9 @@
-<<<<<<< HEAD
+
 ﻿using Eco_Ease_Recycling.ViewModels;
 using Eco_Ease_Recycling.Views;
-=======
 ﻿using Eco_Ease_Recycling.Views;
 using Location = Eco_Ease_Recycling.Views.Location;
->>>>>>> Location page
+
 
 namespace Eco_Ease_Recycling
 {

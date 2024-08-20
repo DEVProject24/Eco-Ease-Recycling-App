@@ -30,13 +30,13 @@
     ContentTemplate="{DataTemplate views:LoadingPage}"
     Route="LoadingPage" />
 
-<<<<<<< HEAD
+
     <ShellContent 
         Title="QR Scan"
         ContentTemplate="{DataTemplate views:QRScan}"
         Route="QR scan"/>
 
-=======
+
     <ShellContent
 Title="EnableNotification"
 ContentTemplate="{DataTemplate views:EnableNotification}"
@@ -51,6 +51,6 @@ Route="SuccessfulLogin" />
 Title="Location"
 ContentTemplate="{DataTemplate views:Location}"
 Route="Location" />
->>>>>>> Location page
+
 
 </Shell>

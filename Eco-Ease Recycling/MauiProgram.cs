@@ -6,12 +6,12 @@ using Firebase.Database;
 using Firebase.Auth;
 //using Windows.Devices.Spi.Provider;
 using Firebase.Auth.Providers;
-<<<<<<< HEAD
+
 using ZXing.Net.Maui.Controls;
-=======
+
 using Location = Eco_Ease_Recycling.Views.Location;
 //using System.Windows.Networking.NetworkOperators;
->>>>>>> Location page
+
 
 namespace Eco_Ease_Recycling
 {
