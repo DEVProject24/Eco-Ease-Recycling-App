@@ -4,7 +4,7 @@ namespace Eco_Ease_Recycling
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        //int count = 0;
 
         /* public MainPage()
          {

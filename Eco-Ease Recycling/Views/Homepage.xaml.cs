@@ -21,4 +21,9 @@ public partial class Homepage : ContentPage
     {
         Shell.Current.GoToAsync("//Location");
     }
+
+	private async Task LoadTipsAsync()
+	{
+
+	}
 }
