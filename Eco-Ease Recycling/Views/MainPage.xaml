@@ -2,54 +2,39 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Eco_Ease_Recycling.Views.MainPage"
-             Shell.NavBarIsVisible="False"
-             BackgroundColor="#22BA43">
-
-
-    <Grid >
-        <Image Margin="390,884"
+             Title="MainPage"
+             Shell.NavBarIsVisible="False">
+    <Grid>
+        <Image x:Name="SplashImage" 
+           Margin="0,0"
            Aspect="AspectFill"
-           HeightRequest="800"
+           HeightRequest="810"
            WidthRequest="400"
-           HorizontalOptions="Center"
-           Source="splash123.png"/>
-        <Rectangle Margin="0,-2000"
-                Fill="#D9D9D9"
-                Opacity="0.0"
-                StrokeThickness="1"
-                WidthRequest="411"
-                HeightRequest="1600"/>
-        <Label Margin="37,60"
-           FontFamily="Aneksemi"
-           FontAttributes="Bold"
-           FontSize="32"
-           HorizontalTextAlignment="Center"
-           Text="Welcome to Eco-Ease"
-           TextColor="White"/>
-        <Label Margin="37,110"
-               FontFamily="Aneksemi"
-               FontAttributes="Bold"
-               FontSize="18"
-               HorizontalTextAlignment="Center"
-               Text="Designed to make recycling easier"
-               TextColor="White"/>
-        <Border StrokeShape="RoundRectangle 25"  
-             BackgroundColor="#22BA43"
-             StrokeThickness="0"
-             Margin="0,700,0,0"
-             WidthRequest="360"
-             HeightRequest="50">
-
-            <HorizontalStackLayout HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        Spacing="10">
-                <Label Text="Get Started"
-                       TextColor="White"
-                       VerticalOptions="Center"
-                       FontSize="16"/>
-            </HorizontalStackLayout>
-
-        </Border>
+           HorizontalOptions="Center"/>
+        <Button
+         Margin="185,680,0,0"
+         BackgroundColor="#22BA43"
+         HeightRequest="54"
+         WidthRequest="173" 
+         CornerRadius="14"
+         FontFamily="AnybodyRegular"
+         FontSize="16"
+         Command="{Binding NavigateCreateAccountCommand}"
+         Text="Sign Up"/>
+        <Button
+         Margin="0,680,185,0"
+         BackgroundColor="#00FFFFFF"
+         BorderColor="White"
+         BorderWidth="2"
+         HeightRequest="54"
+         WidthRequest="173" 
+         CornerRadius="14"
+         FontFamily="AnybodyRegular"
+         FontSize="16"
+         Command="{Binding LoginCommand}"
+         Text="Log in"/>
+        <!--Clicked="Button_Clicked_1"  
+    />-->
     </Grid>
 
 </ContentPage>

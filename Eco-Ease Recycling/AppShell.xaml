@@ -8,6 +8,7 @@
     Shell.FlyoutBehavior="Disabled"
     Title="Eco_Ease_Recycling">
 
+    <ShellContent Title="MainPage" ContentTemplate="{DataTemplate views:MainPage}" Route="MainPage"/>
     
     <ShellContent
         Title="LoginPage"
@@ -51,6 +52,11 @@ Route="SuccessfulLogin" />
 Title="Location"
 ContentTemplate="{DataTemplate views:Location}"
 Route="Location" />
+
+    <ShellContent
+        Title="Profilepage"
+        ContentTemplate="{DataTemplate views:Profilepage}"
+        Route="Profilepage" />
 
 
 </Shell>

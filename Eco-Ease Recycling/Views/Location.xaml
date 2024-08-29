@@ -6,13 +6,178 @@
              Title="Location"
              Shell.NavBarIsVisible="False">
 
-    <maps:Map x:Name ="map"  IsShowingUser="True">
-        <maps:Map.ItemTemplate>
-            <DataTemplate x:DataType="maps:Pin">
-                <maps:Pin Location="{Binding Location}"
-                          Address="{Binding Address}"
-                          Label="{Binding Label}"/>
-            </DataTemplate>
-        </maps:Map.ItemTemplate>
-    </maps:Map>
+    <VerticalStackLayout>
+        <Grid BackgroundColor="White" >
+            <maps:Map x:Name ="map"  IsShowingUser="True" WidthRequest="410" HeightRequest="572" Margin="0,-210,0,0">
+                <maps:Map.ItemTemplate>
+                    <DataTemplate x:DataType="maps:Pin">
+                        <maps:Pin Location="{Binding Location}"
+                      Address="{Binding Address}"
+                      Label="{Binding Label}"/>
+                    </DataTemplate>
+                </maps:Map.ItemTemplate>
+            </maps:Map>
+            <Label Margin="25,25,0,0"
+                Text="Map"
+                FontSize="30"
+                TextColor="#000"
+                FontAttributes="Bold"
+                WidthRequest="228"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" />
+            <Label Margin="180,45,0,0"
+                Text="Allow Current Location"
+                FontSize="10"
+                TextColor="#000"
+                WidthRequest="228"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" />
+            <RoundRectangle Margin="-1,480,0,0"
+                                Fill="#fff"
+                                StrokeThickness="4"
+                                WidthRequest="395"
+                                HeightRequest="301"
+                                StrokeLineCap="Round"
+                                CornerRadius="20"
+                                HorizontalOptions="Start"/>
+            <RoundRectangle Margin="20,125,0,0"
+                            Fill="#FFFFFF"
+                            StrokeThickness="0"
+                            WidthRequest="350"
+                            HeightRequest="37"
+                            StrokeLineCap="Round"
+                            CornerRadius="28"
+                            HorizontalOptions="Start"/>
+            <Image Margin="-295,439,0,0"
+                Aspect="AspectFit"
+                HeightRequest="22"
+                WidthRequest="22"
+                Source="map2.png"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"/>
+            <Label Margin="70,443,0,0"
+                   Text="Finding your nearest mpact center..."
+                   FontSize="14"
+                   TextColor="#7E7E7E"/>
+            <Image Margin="-330,720,0,0"
+                    Aspect="AspectFit"
+                    HeightRequest="22"
+                    WidthRequest="22"
+                    Source="user.png"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"/>
+            <Label Margin="20,748,0,0"
+                Text="Profile"
+                FontSize="8"
+                TextColor="#000000"
+                WidthRequest="31.26"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" />
+            <Image Margin="-180,720,0,0"
+                   Aspect="AspectFit"
+                   HeightRequest="27"
+                   WidthRequest="27"
+                   Source="map.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            <Label Margin="99,727,0,0"
+                    Text="Map"
+                    FontSize="8"
+                    TextColor="#000000"
+                    WidthRequest="31.26"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" />
+            <Ellipse Margin="167,660,0,0"
+                      Stroke="#9BFFAB"
+                      Fill="#9BFFAB"
+                      StrokeThickness="2"
+                      WidthRequest="58.16"
+                      HeightRequest="57.21"
+                      HorizontalOptions="Start" />
+            <Image Margin="0,690,0,0"
+                    Aspect="AspectFit"
+                    HeightRequest="50.81"
+                    WidthRequest="35"
+                    Source="home.png"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"/>
+            <Label  Margin="185,695,0,0"
+                     Text="Home"
+                     FontSize="8"
+                     FontAttributes="Bold"
+                     TextColor="#000000"
+                     WidthRequest="31.26"
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Start" />
+            <Image Margin="150,716,0,0"
+                    Aspect="AspectFit"
+                    HeightRequest="35"
+                    WidthRequest="35"
+                    Source="wallet.png"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"/>
+            <Label  Margin="258,727,0,0"
+                     Text="Wallet"
+                     FontSize="8"
+                     TextColor="#000000"
+                     WidthRequest="31.26"
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Start" />
+            <Image Margin="300,720,0,0"
+                    Aspect="AspectFit"
+                    HeightRequest="25"
+                    WidthRequest="25"
+                    Source="scan.png"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"/>
+            <Label  Margin="330,727,0,0"
+                     Text="QR Scan"
+                     FontSize="8"
+                     TextColor="#000000"
+                     WidthRequest="31.26"
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Start" />
+            <SearchBar Placeholder="Search "
+                       PlaceholderColor="#000000"
+                       FontSize="13"
+                       Margin="0,260,0,0"
+                       HeightRequest="50"
+                       TextColor="Black"
+                       BackgroundColor="#ECEFF3"
+                       WidthRequest="343"/>
+            <Entry  Margin="0,390,0,0"
+                    Placeholder=""
+                    BackgroundColor="#D9D9D9"
+                    Opacity="0.17"
+                    IsReadOnly="True"
+                    PlaceholderColor="#7E7E7E"
+                    TextColor="Black"
+                    WidthRequest="334"
+                    HeightRequest="43" />
+            <BoxView Margin="0,430,0,0"
+                     BackgroundColor="Black"
+                     WidthRequest="334"
+                     HeightRequest="1"
+                     HorizontalOptions="FillAndExpand" />
+            <Entry  Margin="0,530,0,0"
+                    Placeholder="                                Almost there..."
+                    BackgroundColor="#F4F4F4"
+                    Opacity="0.69"
+                    FontSize="14"
+                    IsReadOnly="True"
+                    PlaceholderColor="#7E7E7E"
+                    TextColor="Black"
+                    WidthRequest="349"
+                    HeightRequest="49">
+                <Entry.Effects>
+                    
+                </Entry.Effects> 
+            </Entry>
+            <BoxView Margin="0,580,0,0"
+                     BackgroundColor="Black"
+                     WidthRequest="349"
+                     HeightRequest="1"
+                     HorizontalOptions="FillAndExpand" />
+        </Grid>
+    </VerticalStackLayout>
 </ContentPage>

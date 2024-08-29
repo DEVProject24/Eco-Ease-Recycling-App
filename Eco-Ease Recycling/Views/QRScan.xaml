@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Eco_Ease_Recycling.Views.QRScan"
-             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls">
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             Shell.NavBarIsVisible="False">
 
     <VerticalStackLayout>
         <Grid BackgroundColor="White" Margin="25,25,0,0" >
@@ -14,14 +15,14 @@
                     WidthRequest="228"
                     VerticalOptions="Start" 
                     HorizontalOptions="Start" />
-            <Label Margin="-10,90,0,0"
+            <Label Margin="-10,60,0,0"
                    Text="Scan the QR code on your mpact slip."
                    HorizontalOptions="Center"
                    FontSize="16"
                    TextColor="#000000"/>
         </Grid>
         <Grid>
-            <RoundRectangle Margin="27,446,0,0"
+            <RoundRectangle Margin="27,440,0,0"
                Fill="#CAFF59"
                StrokeThickness="4"
                WidthRequest="334"
@@ -90,11 +91,11 @@
                Aspect="AspectFit"
                HeightRequest="26"
                WidthRequest="26"
-               Source="trophy.png"
+               Source="wallet.png"
                VerticalOptions="Start"
                HorizontalOptions="Center"/>
         <Label  Margin="258,643,0,0"
-                Text="Reward"
+                Text="Wallet"
                 FontSize="8"
                 TextColor="#000000"
                 WidthRequest="31.26"

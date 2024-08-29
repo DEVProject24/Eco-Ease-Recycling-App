@@ -13,14 +13,14 @@ namespace Eco_Ease_Recycling
         {
             InitializeComponent();
 
-            MainPage = new  AppShell();
+            MainPage = new  Homepage();
         }
 
-        protected override async void OnStart()
+       /* protected override async void OnStart()
         {
-            await Shell.Current.GoToAsync("//Homepage");
+            await Shell.Current.GoToAsync("//MainPage");
 
             base.OnStart();
-        }
+        }*/
     }
 }

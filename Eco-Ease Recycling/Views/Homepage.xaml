@@ -198,13 +198,13 @@
                     HorizontalOptions="Start" />
             <Image Margin="150,615,0,0"
                    Aspect="AspectFit"
-                   HeightRequest="26"
-                   WidthRequest="26"
-                   Source="trophy.png"
+                   HeightRequest="33"
+                   WidthRequest="33"
+                   Source="wallet.png"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label  Margin="258,643,0,0"
-                    Text="Reward"
+                    Text="Wallet"
                     FontSize="8"
                     TextColor="#000000"
                     WidthRequest="31.26"
