@@ -385,6 +385,10 @@
                    TextColor="#FFFFFF"
                    FontSize="10"
                    FontAttributes="Bold"/>
+            <Label Margin="80,548,0,0"
+                   Text="Flatten plastic bottles before recycling them"
+                   FontSize="12"
+                   TextColor="#000"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
