@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eco_Ease_Recycling.Views.AddCard"
+             Shell.NavBarIsVisible="False"
+             Title="AddCard">
+    <Grid>
+        <Image Aspect="AspectFit"
+           Margin="16,20,0,0"
+           HeightRequest="14.79"
+           WidthRequest="14"
+           Source="back.png"
+           HorizontalOptions="Start"/>
+        <Label Margin="23,22,0,0"
+           FontFamily="AnybodyRegular"
+           FontSize="16"
+           HorizontalTextAlignment="Start"
+           Text="    Debit/Credit Card"
+           TextColor="Black"/>
+    </Grid>
+</ContentPage>

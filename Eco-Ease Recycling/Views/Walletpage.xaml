@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eco_Ease_Recycling.Views.Walletpage"
+             Title="Walletpage"
+             Shell.NavBarIsVisible="False">
+
+    <VerticalStackLayout>
+        <Label 
+            Text="Wallet"
+            TextColor="#2DCC70"
+            FontAttributes="Bold"
+            FontSize="24"
+            Margin="-250,25,0,0"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button 
+            Margin="-160,30,0,0"
+            Text=""
+            BackgroundColor="#31653D"
+            WidthRequest="134"
+            HeightRequest="28"
+            CornerRadius="5">
+            <Button.Shadow>
+                <Shadow
+                    Radius="5"
+                    Opacity="0.5"
+                    Offset="2,2" />
+            </Button.Shadow>
+        </Button>
+        <Label
+            Margin="-90,-25,0,0"
+            Text="Overview"
+            TextColor="White"
+            FontSize="15"
+            WidthRequest="134"
+            HeightRequest="28" />
+        <Button
+            Margin="170,-31,0,0"
+            Text=""
+            BackgroundColor="white"
+            WidthRequest="134"
+            HeightRequest="28"
+            CornerRadius="5">
+            <Button.Shadow>
+                <Shadow
+                    Radius="5"
+                    Opacity="0.5"
+                    Offset="2,2" />
+            </Button.Shadow>
+        </Button>
+        <Label
+            Margin="260,-25,0,0"
+            Text="History"
+            TextColor="Black"
+            FontSize="15"
+            WidthRequest="134"
+            HeightRequest="28" />
+        <Image Margin="-300,600,0,0"
+                Aspect="AspectFit"
+                HeightRequest="22"
+                WidthRequest="22"
+                Source="user.png"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"/>
+        <Label Margin="-300,500,0,0"
+                Text="Profile"
+                FontSize="8"
+                TextColor="#000000"
+                WidthRequest="31.26"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" />
+        <Image Margin="-180,600,0,0"
+                   Aspect="AspectFit"
+                   HeightRequest="27"
+                   WidthRequest="27"
+                   Source="map.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+        <Label Margin="99,727,0,0"
+                Text="Map"
+                FontSize="8"
+                TextColor="#000000"
+                WidthRequest="31.26"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
+        <Ellipse Margin="167,660,0,0"
+                  Stroke="#9BFFAB"
+                  Fill="#9BFFAB"
+                  StrokeThickness="2"
+                  WidthRequest="58.16"
+                  HeightRequest="57.21"
+                  HorizontalOptions="Start" />
+        <Image Margin="0,690,0,0"
+                Aspect="AspectFit"
+                HeightRequest="50.81"
+                WidthRequest="35"
+                Source="home.png"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"/>
+        <Label  Margin="185,695,0,0"
+                 Text="Home"
+                 FontSize="8"
+                 FontAttributes="Bold"
+                 TextColor="#000000"
+                 WidthRequest="31.26"
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Start" />
+        <Image Margin="150,716,0,0"
+                Aspect="AspectFit"
+                HeightRequest="35"
+                WidthRequest="35"
+                Source="wallet.png"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"/>
+        <Label  Margin="258,727,0,0"
+                 Text="Wallet"
+                 FontSize="8"
+                 TextColor="#000000"
+                 WidthRequest="31.26"
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Start" />
+        <Image Margin="300,720,0,0"
+                Aspect="AspectFit"
+                HeightRequest="25"
+                WidthRequest="25"
+                Source="scan.png"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"/>
+        <Label  Margin="330,727,0,0"
+                 Text="QR Scan"
+                 FontSize="8"
+                 TextColor="#000000"
+                 WidthRequest="31.26"
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Start" />
+    </VerticalStackLayout>
+</ContentPage>
