@@ -1,7 +1,6 @@
 
 ﻿using Eco_Ease_Recycling.ViewModels;
 using Eco_Ease_Recycling.Views;
-﻿using Eco_Ease_Recycling.Views;
 using Location = Eco_Ease_Recycling.Views.Location;
 
 
@@ -13,7 +12,7 @@ namespace Eco_Ease_Recycling
         {
             InitializeComponent();
 
-            MainPage = new  Homepage();
+            MainPage = new  MainPage();
         }
 
        /* protected override async void OnStart()

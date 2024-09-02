@@ -6,10 +6,6 @@ namespace Eco_Ease_Recycling.Views
 {
     public partial class MainPage : ContentPage
     {
-<<<<<<< Updated upstream
-        //int count = 0;
-=======
-        // Define the list of image sources
         private List<ImageSource> _imageSources = new List<ImageSource>
         {
             GetImageSource("splash1.jpg"),
@@ -21,7 +17,7 @@ namespace Eco_Ease_Recycling.Views
         private int _currentImageIndex = 0;
         private readonly TimeSpan _interval = TimeSpan.FromSeconds(2);
         private System.Timers.Timer _timer;
->>>>>>> Stashed changes
+
 
         public MainPage()
         {

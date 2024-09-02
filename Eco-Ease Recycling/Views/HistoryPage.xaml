@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eco_Ease_Recycling.Views.HistoryPage"
+             Title="HistoryPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Wallet"
+            TextColor="#2DCC70"
+            FontAttributes="Bold"
+            FontSize="24"
+            Margin="-250,25,0,0"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button 
+            Margin="-180,30,0,0"
+            Text=""
+            BackgroundColor="White"
+            WidthRequest="134"
+            HeightRequest="28"
+            CornerRadius="5">
+            <Button.Shadow>
+                <Shadow
+                Radius="5"
+                Opacity="0.5"
+                Offset="2,2" />
+            </Button.Shadow>
+        </Button>
+        <Label
+                Margin="-110,-25,0,0"
+                Text="Overview"
+                TextColor="#000"
+                FontSize="15"
+                WidthRequest="134"
+                HeightRequest="28" />
+        <Button
+                Margin="170,-31,0,0"
+                Text=""
+                BackgroundColor="#31653D"
+                WidthRequest="134"
+                HeightRequest="28"
+                CornerRadius="5">
+            <Button.Shadow>
+                <Shadow
+                Radius="5"
+                Opacity="0.5"
+                Offset="2,2" />
+            </Button.Shadow>
+        </Button>
+        <Label
+            Margin="260,-25,0,0"
+            Text="History"
+            TextColor="White"
+            FontSize="15"
+            WidthRequest="134"
+            HeightRequest="28" />
+        <Grid>
+            <RoundRectangle Margin="27,420,0,0"
+                       Fill="#CAFF59"
+                       StrokeThickness="4"
+                       WidthRequest="334"
+                       HeightRequest="55"
+                       StrokeLineCap="Round"
+                       CornerRadius="25"
+                       HorizontalOptions="Start"/>
+            <Image Margin="-269,520,0,0"
+                   Aspect="AspectFit"
+                   HeightRequest="22"
+                   WidthRequest="22"
+                   Source="tip.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            <Image Margin="-300,595,0,0"
+                   Aspect="AspectFit"
+                   HeightRequest="22"
+                   WidthRequest="22"
+                   Source="user.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            <Label Margin="35,623,0,0"
+                    Text="Profile"
+                    FontSize="8"
+                    TextColor="#000000"
+                    WidthRequest="31.26"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Start" />
+            <Image Margin="-150,595,0,0"
+                   Aspect="AspectFit"
+                   HeightRequest="27"
+                   WidthRequest="27"
+                   Source="map.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            <Label Margin="111,623,0,0"
+                    Text="Map"
+                    FontSize="8"
+                    TextColor="#000000"
+                    WidthRequest="31.26"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" />
+            <Ellipse Margin="167,560,0,0"
+                     Stroke="#9BFFAB"
+                     Fill="#9BFFAB"
+                     StrokeThickness="2"
+                     WidthRequest="58.16"
+                     HeightRequest="57.21"
+                     HorizontalOptions="Start" />
+            <Image Margin="0,565,0,0"
+                   Aspect="AspectFit"
+                   HeightRequest="50.81"
+                   WidthRequest="35"
+                   Source="home.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            <Label  Margin="185,593,0,0"
+                    Text="Home"
+                    FontSize="8"
+                    FontAttributes="Bold"
+                    TextColor="#000000"
+                    WidthRequest="31.26"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" />
+            <Image Margin="150,595,0,0"
+                   Aspect="AspectFit"
+                   HeightRequest="26"
+                   WidthRequest="26"
+                   Source="wallet.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            <Label  Margin="258,623,0,0"
+                    Text="Wallet"
+                    FontSize="8"
+                    TextColor="#000000"
+                    WidthRequest="31.26"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" />
+            <Image Margin="300,595,0,0"
+                   Aspect="AspectFit"
+                   HeightRequest="25"
+                   WidthRequest="25"
+                   Source="scan.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            <Label  Margin="330,623,0,0"
+                    Text="QR Scan"
+                    FontSize="8"
+                    TextColor="#000000"
+                    WidthRequest="31.26"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" />
+            <Label Margin="80,520,0,0"
+               Text="Flatten plastic bottles before recycling them"
+               FontSize="12"
+               TextColor="#000"/>
+            <RoundRectangle Margin="29,-500,0,0"
+                       Fill="#D9D9D9"
+                       Opacity="0.3"
+                       StrokeThickness="4"
+                       WidthRequest="331"
+                       HeightRequest="88"
+                       StrokeLineCap="Round"
+                       CornerRadius="20"
+                       HorizontalOptions="Start"/>
+            <Label Margin="50,34,0,0"
+                   Text="You have earned "
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   TextColor="#000"/>
+            <Label Margin="300,34,0,0"
+                   Text="R"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   TextColor="#000"/>
+            <Label Margin="310,34,0,0"
+                   Text="15"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   TextColor="#000"/>
+            <Label Margin="130,65,0,0"
+                   Text="1 December 2023"
+                   FontSize="13"
+                   TextColor="#000"/>
+            <Label Margin="110,85,0,0"
+                   Text="Recycled 6kg of plastic bottles"
+                   TextColor="#797979"
+                   FontSize="11"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

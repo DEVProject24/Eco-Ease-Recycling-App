@@ -53,93 +53,34 @@
                          VerticalOptions="Center"/>
             </Border>
         </Grid>
+        <Label Margin="20,25,0,0"
+               FontFamily="AnybodyRegular"
+               FontSize="16"
+               HorizontalTextAlignment="Start"
+               Text="Password"
+               TextColor="Black"/>
+        <Grid>
+            <Border Stroke="White" StrokeThickness="0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5,5,5,5" />
+                </Border.StrokeShape>
+                <Entry Margin="40,10,0,0"
+                 Grid.Column="1"
+                 WidthRequest="300"
+                 BackgroundColor="Transparent"
+                 IsPassword="True"
+                 Placeholder="password"
+                 PlaceholderColor="#797979"
+                 VerticalOptions="Center"/>
+            </Border>
+        </Grid>
         <Button
-               Margin="16,500,16,0"
+               Margin="16,400,16,0"
                BackgroundColor="#22BA43"
                HeightRequest="50"
                CornerRadius="4"
                FontFamily="AnybodyRegular"
                FontSize="16"
                Text="Log Out"/>
-        <Grid>
-            <Image Margin="-300,615,0,0"
-               Aspect="AspectFit"
-               HeightRequest="22"
-               WidthRequest="22"
-               Source="user.png"
-               VerticalOptions="Start"
-               HorizontalOptions="Center"/>
-            <Label  Margin="35,643,0,0"
-                Text="Profile"
-                FontSize="8"
-                TextColor="#000000"
-                WidthRequest="31.26"
-                VerticalOptions="Start" 
-                HorizontalOptions="Start" />
-            <ImageButton Margin="-150,615,0,0"
-               Aspect="AspectFit"
-               HeightRequest="27"
-               WidthRequest="27"
-               Source="map.png"
-               VerticalOptions="Start"
-               HorizontalOptions="Center"/>
-            <Label  Margin="111,643,0,0"
-                Text="Map"
-                FontSize="8"
-                TextColor="#000000"
-                WidthRequest="31.26"
-                VerticalOptions="Center" 
-                HorizontalOptions="Start" />
-            <Ellipse Margin="167,580,0,0"
-                 Stroke="#9BFFAB"
-                 Fill="#9BFFAB"
-                 StrokeThickness="2"
-                 WidthRequest="58.16"
-                 HeightRequest="57.21"
-                 HorizontalOptions="Start" />
-            <Image Margin="0,585,0,0"
-               Aspect="AspectFit"
-               HeightRequest="50.81"
-               WidthRequest="35"
-               Source="home.png"
-               VerticalOptions="Start"
-               HorizontalOptions="Center"/>
-            <Label  Margin="185,613,0,0"
-                Text="Home"
-                FontSize="8"
-                FontAttributes="Bold"
-                TextColor="#000000"
-                WidthRequest="31.26"
-                VerticalOptions="Center" 
-                HorizontalOptions="Start" />
-            <Image Margin="150,615,0,0"
-               Aspect="AspectFit"
-               HeightRequest="33"
-               WidthRequest="33"
-               Source="wallet.png"
-               VerticalOptions="Start"
-               HorizontalOptions="Center"/>
-            <Label  Margin="258,643,0,0"
-                Text="Wallet"
-                FontSize="8"
-                TextColor="#000000"
-                WidthRequest="31.26"
-                VerticalOptions="Center" 
-                HorizontalOptions="Start" />
-            <Image Margin="300,615,0,0"
-               Aspect="AspectFit"
-               HeightRequest="25"
-               WidthRequest="25"
-               Source="scan.png"
-               VerticalOptions="Start"
-               HorizontalOptions="Center"/>
-            <Label  Margin="330,643,0,0"
-                Text="QR Scan"
-                FontSize="8"
-                TextColor="#000000"
-                WidthRequest="31.26"
-                VerticalOptions="Center" 
-                HorizontalOptions="Start" />
-        </Grid>
     </VerticalStackLayout>
 </ContentPage>
