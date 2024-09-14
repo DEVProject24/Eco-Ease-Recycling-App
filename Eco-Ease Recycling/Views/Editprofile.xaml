@@ -6,8 +6,9 @@
              Title="Editprofile">
     <VerticalStackLayout>
         <Grid>
-            <Image Aspect="AspectFit"
+            <ImageButton Aspect="AspectFit"
                    Margin="16,20,0,0"
+                   Clicked="Back_Clicked"
                    HeightRequest="14.79"
                    WidthRequest="14"
                    Source="back.png"

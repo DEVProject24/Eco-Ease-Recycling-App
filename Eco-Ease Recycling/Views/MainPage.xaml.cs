@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Maui.Controls;
-
+﻿//using Java.Util;
 namespace Eco_Ease_Recycling.Views
 {
     public partial class MainPage : ContentPage
@@ -71,6 +68,11 @@ namespace Eco_Ease_Recycling.Views
         private void Button_Clicked_1(object sender, EventArgs e)
         {
             Shell.Current.GoToAsync("//LoginPage");
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Shell.Current.GoToAsync("//CreateAccount");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Eco_Ease_Recycling.Views;
+﻿//using Java.Util;
+using Eco_Ease_Recycling.Views;
 
 namespace Eco_Ease_Recycling
 {
@@ -9,9 +10,9 @@ namespace Eco_Ease_Recycling
             InitializeComponent();
             Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
             Routing.RegisterRoute(nameof(CreateAccount), typeof(CreateAccount));
-           
-           Routing.RegisterRoute(nameof(Homepage), typeof(Homepage));
-           Routing.RegisterRoute(nameof(Views.Location), typeof(Views.Location));
+
+            Routing.RegisterRoute(nameof(Homepage), typeof(Homepage));
+            Routing.RegisterRoute(nameof(Views.Location), typeof(Views.Location));
         }
     }
 }

@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Eco_Ease_Recycling.Views.HistoryPage"
+             Shell.NavBarIsVisible="False"
              Title="HistoryPage">
     <VerticalStackLayout>
         <Label 
@@ -70,11 +71,12 @@
                    Source="tip.png"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
-            <Image Margin="-300,595,0,0"
+            <ImageButton Margin="-300,595,0,0"
                    Aspect="AspectFit"
                    HeightRequest="22"
                    WidthRequest="22"
                    Source="user.png"
+                   Clicked="ProfileButton_Clicked"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label Margin="35,623,0,0"
@@ -84,11 +86,12 @@
                     WidthRequest="31.26"
                     VerticalOptions="Start" 
                     HorizontalOptions="Start" />
-            <Image Margin="-150,595,0,0"
+            <ImageButton Margin="-150,595,0,0"
                    Aspect="AspectFit"
                    HeightRequest="27"
                    WidthRequest="27"
                    Source="map.png"
+                   Clicked="LocationButton_Clicked"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label Margin="111,623,0,0"
@@ -105,11 +108,12 @@
                      WidthRequest="58.16"
                      HeightRequest="57.21"
                      HorizontalOptions="Start" />
-            <Image Margin="0,565,0,0"
+            <ImageButton Margin="0,565,0,0"
                    Aspect="AspectFit"
                    HeightRequest="50.81"
                    WidthRequest="35"
                    Source="home.png"
+                   Clicked="HomeButton_Clicked"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label  Margin="185,593,0,0"
@@ -120,11 +124,12 @@
                     WidthRequest="31.26"
                     VerticalOptions="Center" 
                     HorizontalOptions="Start" />
-            <Image Margin="150,595,0,0"
+            <ImageButton Margin="150,595,0,0"
                    Aspect="AspectFit"
                    HeightRequest="26"
                    WidthRequest="26"
                    Source="wallet.png"
+                   Clicked="WalletButton_Clicked"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label  Margin="258,623,0,0"
@@ -134,11 +139,12 @@
                     WidthRequest="31.26"
                     VerticalOptions="Center" 
                     HorizontalOptions="Start" />
-            <Image Margin="300,595,0,0"
+            <ImageButton Margin="300,595,0,0"
                    Aspect="AspectFit"
                    HeightRequest="25"
                    WidthRequest="25"
                    Source="scan.png"
+                   Clicked="ScanButton_Clicked"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label  Margin="330,623,0,0"

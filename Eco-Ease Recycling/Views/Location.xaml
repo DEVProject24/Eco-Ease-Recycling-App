@@ -59,11 +59,12 @@
                    Text="Finding your nearest mpact center..."
                    FontSize="14"
                    TextColor="#7E7E7E"/>
-            <Image Margin="-330,720,0,0"
+            <ImageButton Margin="-330,720,0,0"
                     Aspect="AspectFit"
                     HeightRequest="22"
                     WidthRequest="22"
                     Source="user.png"
+                         Clicked="ProfileButton_Clicked"
                     VerticalOptions="Start"
                     HorizontalOptions="Center"/>
             <Label Margin="20,748,0,0"
@@ -73,11 +74,12 @@
                 WidthRequest="31.26"
                 VerticalOptions="Start" 
                 HorizontalOptions="Start" />
-            <Image Margin="-180,720,0,0"
+            <ImageButton Margin="-180,720,0,0"
                    Aspect="AspectFit"
                    HeightRequest="27"
                    WidthRequest="27"
                    Source="map.png"
+                   Clicked="LocationButton_Clicked"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label Margin="99,727,0,0"
@@ -94,11 +96,12 @@
                       WidthRequest="58.16"
                       HeightRequest="57.21"
                       HorizontalOptions="Start" />
-            <Image Margin="0,690,0,0"
+            <ImageButton Margin="0,690,0,0"
                     Aspect="AspectFit"
                     HeightRequest="50.81"
                     WidthRequest="35"
                     Source="home.png"
+                    Clicked="HomeButton_Clicked"
                     VerticalOptions="Start"
                     HorizontalOptions="Center"/>
             <Label  Margin="185,695,0,0"
@@ -109,11 +112,12 @@
                      WidthRequest="31.26"
                      VerticalOptions="Center" 
                      HorizontalOptions="Start" />
-            <Image Margin="150,716,0,0"
+            <ImageButton Margin="150,716,0,0"
                     Aspect="AspectFit"
                     HeightRequest="35"
                     WidthRequest="35"
                     Source="wallet.png"
+                    Clicked="WalletButton_Clicked"
                     VerticalOptions="Start"
                     HorizontalOptions="Center"/>
             <Label  Margin="258,727,0,0"
@@ -123,11 +127,12 @@
                      WidthRequest="31.26"
                      VerticalOptions="Center" 
                      HorizontalOptions="Start" />
-            <Image Margin="300,720,0,0"
+            <ImageButton Margin="300,720,0,0"
                     Aspect="AspectFit"
                     HeightRequest="25"
                     WidthRequest="25"
                     Source="scan.png"
+                    Clicked="ScanButton_Clicked"
                     VerticalOptions="Start"
                     HorizontalOptions="Center"/>
             <Label  Margin="330,727,0,0"
@@ -137,14 +142,25 @@
                      WidthRequest="31.26"
                      VerticalOptions="Center" 
                      HorizontalOptions="Start" />
-            <SearchBar Placeholder="Search "
+            <SearchBar Placeholder="Search " x:Name="SearchBar"
                        PlaceholderColor="#000000"
                        FontSize="13"
                        Margin="0,260,0,0"
                        HeightRequest="50"
                        TextColor="Black"
+                       TextChanged="SearchBar_TextChanged"
                        BackgroundColor="#ECEFF3"
                        WidthRequest="343"/>
+
+            <!--<ListView x:Name="RecyclingCenterListView"
+                  ItemsSource="{x:Binding filteredList, Mode=OneWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{x:Binding Label}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+
             <Entry  Margin="0,390,0,0"
                     Placeholder=""
                     BackgroundColor="#D9D9D9"

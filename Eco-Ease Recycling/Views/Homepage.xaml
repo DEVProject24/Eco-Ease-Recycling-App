@@ -145,11 +145,12 @@
                    Source="tip.png"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
-            <Image Margin="-300,615,0,0"
+            <ImageButton Margin="-300,615,0,0"
                    Aspect="AspectFit"
                    HeightRequest="22"
                    WidthRequest="22"
                    Source="user.png"
+                   Clicked="ProfileButton_Clicked"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label  Margin="35,643,0,0"
@@ -181,11 +182,12 @@
                      WidthRequest="58.16"
                      HeightRequest="57.21"
                      HorizontalOptions="Start" />
-            <Image Margin="0,585,0,0"
+            <ImageButton Margin="0,585,0,0"
                    Aspect="AspectFit"
                    HeightRequest="50.81"
                    WidthRequest="35"
                    Source="home.png"
+                   Clicked="HomeButton_Clicked"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label  Margin="185,613,0,0"
@@ -198,23 +200,24 @@
                     HorizontalOptions="Start" />
             <Image Margin="150,615,0,0"
                    Aspect="AspectFit"
-                   HeightRequest="33"
-                   WidthRequest="33"
-                   Source="wallet.png"
+                   HeightRequest="26"
+                   WidthRequest="26"
+                   Source="trophy.png"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label  Margin="258,643,0,0"
-                    Text="Wallet"
+                    Text="Reward"
                     FontSize="8"
                     TextColor="#000000"
                     WidthRequest="31.26"
                     VerticalOptions="Center" 
                     HorizontalOptions="Start" />
-            <Image Margin="300,615,0,0"
+            <ImageButton Margin="300,615,0,0"
                    Aspect="AspectFit"
                    HeightRequest="25"
                    WidthRequest="25"
                    Source="scan.png"
+                   Clicked="ScanButton_Clicked"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label  Margin="330,643,0,0"
@@ -224,6 +227,11 @@
                     WidthRequest="31.26"
                     VerticalOptions="Center" 
                     HorizontalOptions="Start" />
+            <Label Margin="80,520,0,0"
+                   x:Name="TipsLabel"
+                    Text="Flatten plastic bottles before recycling them"
+                    FontSize="12"
+                    TextColor="#000"/>
             <RoundRectangle Margin="30,-200,0,0"
                             Stroke="#2DCC70"
                            StrokeThickness="2"
@@ -385,10 +393,6 @@
                    TextColor="#FFFFFF"
                    FontSize="10"
                    FontAttributes="Bold"/>
-            <Label Margin="80,548,0,0"
-                   Text="Flatten plastic bottles before recycling them"
-                   FontSize="12"
-                   TextColor="#000"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

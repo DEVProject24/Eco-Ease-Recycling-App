@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿//using Java.Util;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 namespace Eco_Ease_Recycling.ViewModels
@@ -9,7 +10,7 @@ namespace Eco_Ease_Recycling.ViewModels
         private async Task Submit()
         {
             await Shell.Current.GoToAsync("//CreateAccount");
-                
+
         }
 
         [RelayCommand]
@@ -20,13 +21,13 @@ namespace Eco_Ease_Recycling.ViewModels
         }
     }
 
-    
+
 }
 
-    
 
-    
-    
-    
-    
+
+
+
+
+
 

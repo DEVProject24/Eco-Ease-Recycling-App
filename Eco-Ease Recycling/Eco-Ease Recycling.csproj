@@ -58,10 +58,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="MainPage.xaml.cs" />
 	  <Compile Remove="Views\LocationPage.xaml.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Remove="MainPage.xaml" />
 	  <MauiXaml Remove="Views\LocationPage.xaml" />
 	</ItemGroup>
 

@@ -1,14 +1,10 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//using Java.Util;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Eco_Ease_Recycling.ViewModels
 {
-    public partial class HomePageViewModel:ObservableObject
+    public partial class HomePageViewModel : ObservableObject
     {
     }
-    
+
 }

@@ -1,9 +1,4 @@
-
-﻿using Eco_Ease_Recycling.ViewModels;
-using Eco_Ease_Recycling.Views;
-using Location = Eco_Ease_Recycling.Views.Location;
-
-
+//using Java.Util;
 namespace Eco_Ease_Recycling
 {
     public partial class App : Application
@@ -12,14 +7,14 @@ namespace Eco_Ease_Recycling
         {
             InitializeComponent();
 
-            MainPage = new  MainPage();
+            MainPage = new AppShell();
         }
 
-       /* protected override async void OnStart()
+        protected override async void OnStart()
         {
             await Shell.Current.GoToAsync("//MainPage");
 
             base.OnStart();
-        }*/
+        }
     }
 }

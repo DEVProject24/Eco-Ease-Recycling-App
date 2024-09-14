@@ -35,7 +35,7 @@
     <ShellContent 
         Title="QR Scan"
         ContentTemplate="{DataTemplate views:QRScan}"
-        Route="QR scan"/>
+        Route="QRScan"/>
 
 
     <ShellContent
@@ -58,5 +58,23 @@ Route="Location" />
         ContentTemplate="{DataTemplate views:Profilepage}"
         Route="Profilepage" />
 
+    <ShellContent
+    Title="Walletpage"
+    ContentTemplate="{DataTemplate views:Walletpage}"
+    Route="Walletpage" />
 
+    <ShellContent
+    Title="HistoryPage"
+    ContentTemplate="{DataTemplate views:HistoryPage}"
+    Route="HistoryPage" />
+
+    <ShellContent
+ Title="AddCard"
+ ContentTemplate="{DataTemplate views:AddCard}"
+ Route="AddCard" />
+
+    <ShellContent
+Title="Editprofile"
+ContentTemplate="{DataTemplate views:Editprofile}"
+Route="Editprofile" />
 </Shell>

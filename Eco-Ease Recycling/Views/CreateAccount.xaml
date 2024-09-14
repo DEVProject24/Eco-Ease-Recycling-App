@@ -11,10 +11,11 @@
     <Grid >
         <StackLayout >
             <Grid Margin="16,20,0,0">
-                <Image Aspect="AspectFit"
+                <ImageButton Aspect="AspectFit"
                     HeightRequest="27"
                     WidthRequest="17"
                     Source="back.png"
+                    Clicked="MainPage_Clicked"
                     HorizontalOptions="Start"
                     />
                 <Label Margin="16,20"

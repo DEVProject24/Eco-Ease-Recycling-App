@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Eco_Ease_Recycling.Models;
 using Eco_Ease_Recycling.Views;
@@ -30,7 +25,7 @@ namespace Eco_Ease_Recycling.ViewModels
             try
             {
                 var result = await _firebaseAuthClient.CreateUserWithEmailAndPasswordAsync(
-                 createAccountModel.Email, createAccountModel.Password, createAccountModel.Username);
+                 CreateAccountModel.Email, CreateAccountModel.Password, CreateAccountModel.Username);
 
                 if (!string.IsNullOrWhiteSpace(result?.User?.Info?.Email))
                 {
@@ -55,8 +50,8 @@ namespace Eco_Ease_Recycling.ViewModels
 
         private async Task NavigateSignIn()
         {
-            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}",true);
+            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}", true);
         }
     }
-    
+
 }

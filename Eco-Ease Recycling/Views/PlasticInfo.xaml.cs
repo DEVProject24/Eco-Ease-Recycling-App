@@ -1,9 +1,10 @@
+//using Java.Util;
 namespace Eco_Ease_Recycling.Views;
 
 public partial class PlasticInfo : ContentPage
 {
-	public PlasticInfo()
-	{
-		InitializeComponent();
-	}
+    public PlasticInfo()
+    {
+        InitializeComponent();
+    }
 }
