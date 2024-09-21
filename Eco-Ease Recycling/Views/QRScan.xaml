@@ -92,8 +92,8 @@
                     HorizontalOptions="Start" />
             <ImageButton Margin="150,615,0,0"
                    Aspect="AspectFit"
-                   HeightRequest="27"
-                   WidthRequest="27"
+                   HeightRequest="33"
+                   WidthRequest="33"
                    Source="wallet.png"
                    Clicked="WalletButton_Clicked"
                    VerticalOptions="Start"
@@ -125,10 +125,11 @@
                    Text="Connect your PayPal Account to easily access your points."
                    FontSize="12"
                    TextColor="#000"/>
+            <Label x:Name="BarcodeResults" FontSize="20" TextColor="#737B7D" />
             <zxing:CameraBarcodeReaderView Margin="25,60,25,200"
                x:Name="barcodeReader"
                WidthRequest="258" 
-               HeightRequest="30"                            
+               HeightRequest="30"
                BarcodesDetected="barcodeReader_BarcodesDetected"/>
         </Grid>
     </VerticalStackLayout>

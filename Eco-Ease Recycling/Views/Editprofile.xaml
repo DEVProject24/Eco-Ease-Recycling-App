@@ -74,6 +74,18 @@
                  PlaceholderColor="#797979"
                  VerticalOptions="Center"/>
             </Border>
+            <Image Source="usergray.png"
+                   Margin="-300,-295,0,0"
+                   WidthRequest="22.48"
+                   HeightRequest="19.89"/>
+            <Image Source="mailgray.png"
+                   Margin="-300,-190,0,0"
+                   WidthRequest="23.48"
+                   HeightRequest="20.89"/>
+            <Image Source="greylock.png"
+                   Margin="-300,10,0,0"
+                   WidthRequest="23.48"
+                   HeightRequest="20.89"/>
         </Grid>
         <Button
                Margin="16,400,16,0"
