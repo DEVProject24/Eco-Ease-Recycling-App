@@ -10,14 +10,13 @@
 
     <Grid >
         <StackLayout >
-            <Grid Margin="16,20,0,0">
+            <Grid Margin="16,3,0,0">
                 <ImageButton Aspect="AspectFit"
                     HeightRequest="27"
                     WidthRequest="17"
                     Source="back.png"
                     Clicked="MainPage_Clicked"
-                    HorizontalOptions="Start"
-                    />
+                    HorizontalOptions="Start"/>
                 <Label Margin="16,20"
                    FontAttributes="Bold"
                    FontFamily="AnybodyRegular"
@@ -26,21 +25,21 @@
                    Text=" Back"
                    TextColor="#22BA43"/>
             </Grid>
-            <Label Margin="16,2,0,0"
+            <Label Margin="16,5,0,0"
                    FontFamily="AnyboyRegular"
                    FontSize="20"
                    HorizontalTextAlignment="Start"
                    Text="Create new account"
                    TextColor="#1A1C29"/>
             <Grid Margin="16,16,16,0">
-                <Label FontFamily="Alike"
+                <Label 
                        FontSize="15"
                        HorizontalTextAlignment="Start"
                        Text="Username"
                        TextColor="#797979"/>
             </Grid>
             <Grid Margin="16,16,16,0">
-                <Border Stroke="#797979" StrokeThickness="0">
+                <Border Stroke="#22BA43" StrokeThickness="1.5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="45,45,45,45" />
                     </Border.StrokeShape>
@@ -48,20 +47,21 @@
                      Grid.Column="1"
                      BackgroundColor="#F3F3F3"
                      Placeholder=" Username"
-                     PlaceholderColor="#797979"
+                    
+                     PlaceholderColor="Gray"
                         Text="{Binding CreateAccountModel.Username}"
                      VerticalOptions="Center"/>
                 </Border>
             </Grid>
             <Grid Margin="16,16,0,0">
-                <Label FontFamily="Alike"
+                <Label 
                        FontSize="15"
                    HorizontalTextAlignment="Start"
                    Text="Email Address"
                    TextColor="Gray"/>
             </Grid>
             <Grid Margin="16,10,16,0">
-                <Border Stroke="#797979" StrokeThickness="0">
+                <Border Stroke="#22BA43" StrokeThickness="1.5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="45,45,45,45" />
                     </Border.StrokeShape>
@@ -75,33 +75,33 @@
                 </Border>
             </Grid>
             <Grid Margin="16,30,0,0">
-                <Label FontFamily="Alike"
+                <Label 
                HorizontalTextAlignment="Start"
                Text="Password"
                TextColor="#797979"/>
-                <Label Margin="0,20,0,0" FontFamily="Alike" FontSize="15"
+                <Label Margin="0,20,0,0"  FontSize="15"
                     HorizontalTextAlignment="Start"
                     Text="-Must be atleast 8 characters in length"
                     TextColor="#797979"/>
-                <Label Margin="0,40,0,0" FontFamily="Alike" FontSize="15"
+                <Label Margin="0,40,0,0"  FontSize="15"
                     HorizontalTextAlignment="Start"
                     Text="-Must contain atleast one uppercase"
                     TextColor="#797979"/>
-                <Label Margin="0,60,0,0" FontFamily="Alike" FontSize="15"
+                <Label Margin="0,60,0,0"  FontSize="15"
                     HorizontalTextAlignment="Start"
                     Text="-Must contain atleast one lowwercase"
                     TextColor="#797979"/>
-                <Label Margin="0,80,0,0" FontFamily="Alike" FontSize="15"
+                <Label Margin="0,80,0,0"  FontSize="15"
                     HorizontalTextAlignment="Start"
                     Text="-Must contain atleast one number"
                     TextColor="#797979"/>
-                <Label Margin="0,100,0,0" FontFamily="Alike" FontSize="15"
+                <Label Margin="0,100,0,0"  FontSize="15"
                     HorizontalTextAlignment="Start"
                     Text="-Must contain atleast one special character"
                     TextColor="#797979"/>
             </Grid>
             <Grid Margin="16,10,16,0" >
-                <Border Stroke="#797979" StrokeThickness="0">
+                <Border Stroke="#22BA43" StrokeThickness="1.5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="45,45,45,45" />
                     </Border.StrokeShape>
@@ -117,7 +117,7 @@
                 </Border>
             </Grid>
             <Grid Margin="16,10,16,0" >
-                <Border Stroke="#797979" StrokeThickness="0">
+                <Border Stroke="#22BA43" StrokeThickness="1.5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="45,45,45,45" />
                     </Border.StrokeShape>

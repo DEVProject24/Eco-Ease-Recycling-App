@@ -15,7 +15,7 @@
                     WidthRequest="228"
                     VerticalOptions="Start" 
                     HorizontalOptions="Start" />
-            <Label Margin="-10,60,0,0"
+            <Label Margin="-18,60,0,0"
                    Text="Scan the QR code on your mpact slip."
                    HorizontalOptions="Center"
                    FontSize="16"
@@ -122,14 +122,15 @@
                 HorizontalOptions="Start" />
             <Label Margin="45,530,0,0"
                    WidthRequest="258"
-                   Text="Connect your PayPal Account to easily access your points."
+                   Text="Connect your PayPal Account to easily redeem your points."
                    FontSize="12"
                    TextColor="#000"/>
             <Label x:Name="BarcodeResults" FontSize="20" TextColor="#737B7D" />
             <zxing:CameraBarcodeReaderView Margin="25,60,25,200"
                x:Name="barcodeReader"
-               WidthRequest="258" 
-               HeightRequest="30"
+               WidthRequest="346.28" 
+               HeightRequest="372.28"
+               VerticalOptions="Center"                          
                BarcodesDetected="barcodeReader_BarcodesDetected"/>
         </Grid>
     </VerticalStackLayout>

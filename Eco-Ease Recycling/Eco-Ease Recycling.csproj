@@ -185,11 +185,15 @@
 	</ItemGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\forward.png" />
+    <None Remove="Resources\Images\podium.png" />
+    <None Remove="Resources\Images\recyclecon.png" />
     <None Remove="Resources\Images\splash1.jpg" />
     <None Remove="Resources\Images\splash2.jpg" />
     <None Remove="Resources\Images\splash3.jpg" />
     <None Remove="Resources\Images\splash4.jpg" />
     <None Remove="Resources\Images\splash5.jpg" />
+    <None Remove="Resources\Images\yellowpo.png" />
   </ItemGroup>
 
   <ItemGroup>

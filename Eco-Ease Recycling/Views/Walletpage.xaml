@@ -5,15 +5,19 @@
              Title="Walletpage"
              Shell.NavBarIsVisible="False">
 
-    <VerticalStackLayout>
+    <VerticalStackLayout >
         <Label 
             Text="Wallet"
             TextColor="#2DCC70"
             FontAttributes="Bold"
             FontSize="24"
-            Margin="-250,25,0,0"
+            Margin="-250,20,0,0"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Label Margin="0,-5,0,0"
+               Text=" nothing"
+               TextColor="White"
+               VerticalOptions="Center"/>
         <Button 
             Margin="-180,30,0,0"
             Text=""
@@ -74,15 +78,15 @@
                HorizontalOptions="Center"/>
             <ImageButton Margin="-300,595,0,0"
                Aspect="AspectFit"
-               HeightRequest="22"
-               WidthRequest="22"
+               HeightRequest="23"
+               WidthRequest="23"
                Source="user.png"
                Clicked="ProfileButton_Clicked"
                VerticalOptions="Start"
                HorizontalOptions="Center"/>
             <Label Margin="35,623,0,0"
                 Text="Profile"
-                FontSize="8"
+                FontSize="9"
                 TextColor="#000000"
                 WidthRequest="31.26"
                 VerticalOptions="Start" 
@@ -97,7 +101,7 @@
                HorizontalOptions="Center"/>
             <Label Margin="111,623,0,0"
                 Text="Map"
-                FontSize="8"
+                FontSize="9"
                 TextColor="#000000"
                 WidthRequest="31.26"
                 VerticalOptions="Center" 
@@ -125,27 +129,27 @@
                 WidthRequest="31.26"
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
-            <ImageButton Margin="150,595,0,0"
+            <ImageButton Margin="150,592,0,0"
                Aspect="AspectFit"
-               HeightRequest="26"
-               WidthRequest="26"
+               HeightRequest="32"
+               WidthRequest="32"
                Source="wallet.png"
                Clicked="WalletButton_Clicked"
                VerticalOptions="Start"
                HorizontalOptions="Center"/>
             <Label  Margin="258,623,0,0"
                 Text="Wallet"
-                FontSize="8"
+                FontSize="9"
                 TextColor="#000000"
                 WidthRequest="31.26"
                 VerticalOptions="Center" 
                 HorizontalOptions="Start" />
             <ImageButton Margin="300,595,0,0"
                Aspect="AspectFit"
-               HeightRequest="25"
-               WidthRequest="25"
+               HeightRequest="23"
+               WidthRequest="23"
                Source="scan.png"
-                   Clicked="ScanButton_Clicked"
+               Clicked="ScanButton_Clicked"
                VerticalOptions="Start"
                HorizontalOptions="Center"/>
             <Label  Margin="330,623,0,0"
@@ -209,14 +213,26 @@
                    TextColor="#000000"
                    Text="Withdraw using PayPal"
                    FontSize="12"/>
+            <Image Margin="200,-365,0,0"
+                   WidthRequest="66"
+                   HeightRequest="30"
+                   Source="paypal.png"/>
             <Label Margin="60,183,0,0"
                    TextColor="#000000"
                    Text="Withdraw using Ozow"
                    FontSize="12"/>
+            <Image Margin="200,-250,0,0"
+                   WidthRequest="66"
+                   HeightRequest="41"
+                   Source="ozow.png"/>
             <Label Margin="60,245,0,0"
                    TextColor="#000000"
                    Text="Use Debit/Credit card"
                    FontSize="12"/>
+            <Image Margin="200,-130,0,0"
+                   WidthRequest="66"
+                   HeightRequest="45"
+                   Source="visa.png"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

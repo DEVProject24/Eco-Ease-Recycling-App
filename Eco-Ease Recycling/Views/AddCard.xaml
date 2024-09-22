@@ -20,22 +20,63 @@
            TextColor="Black"/>
         </Grid>
         <Grid>
-            <Label Margin="38,40,0,0" Text="Card Number" FontSize="15" TextColor="#868889"/>
-            <Entry Margin="0,20,0,0" WidthRequest="332" HeightRequest="43" Keyboard="Numeric">
-                <Entry.PlaceholderColor>
-                    <OnPlatform x:TypeArguments="Color">
-                        <On Platform="iOS" Value="#868889" />
-                        <On Platform="Android" Value="#868889" />
-                        <On Platform="Windows" Value="#868889" />
-                    </OnPlatform>
-                </Entry.PlaceholderColor>
-            </Entry>
-            <StackLayout  Margin="30,130,0,0" Orientation="Horizontal">
-                <Entry Keyboard="Numeric" Placeholder="(MM/YY)" WidthRequest="120" />
-                <Entry Keyboard="Numeric" Placeholder="CVV" WidthRequest="80" />
-            </StackLayout>
+            <Label Margin="38,30,0,0" Text="Name" FontSize="15" TextColor="#868889" />
+            <Border Stroke="#28B446" StrokeThickness="1"  WidthRequest="332" HeightRequest="43" Margin="0,-90,0,0" >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12,12,12,12" />
+                </Border.StrokeShape>
+                <Entry Margin="0,0,0,0" Keyboard="Text" BackgroundColor="Transparent"  >
+                    <Entry.PlaceholderColor>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="iOS" Value="#868889" />
+                            <On Platform="Android" Value="#868889" />
+                            <On Platform="Windows" Value="#868889" />
+                        </OnPlatform>
+                    </Entry.PlaceholderColor>
+                </Entry>
+            </Border>
+            <Label Margin="38,120,0,0" Text="Card Number" FontSize="15" TextColor="#868889" />
+            <Border Stroke="#28B446" StrokeThickness="1"  WidthRequest="332" HeightRequest="43" Margin="0,80,0,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12,12,12,12" />
+                </Border.StrokeShape>
+                <Entry Margin="0,0,0,0" Keyboard="Numeric" BackgroundColor="Transparent" MaxLength="16" >
+                    <Entry.PlaceholderColor>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="iOS" Value="#868889" />
+                            <On Platform="Android" Value="#868889" />
+                            <On Platform="Windows" Value="#868889" />
+                        </OnPlatform>
+                    </Entry.PlaceholderColor>
+                </Entry>
+            </Border>
+            <Label Margin="38,200,0,0" Text="Expiry Date" FontSize="15" TextColor="#868889" />
+            <Border Stroke="#28B446" StrokeThickness="1"  WidthRequest="79" HeightRequest="38" Margin="-239,225,0,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12,12,12,12" />
+                </Border.StrokeShape>
+                <Entry Margin="70,0,0,0" Keyboard="Numeric" Placeholder="YYYY" WidthRequest="120" PlaceholderColor="#D9D9D9" MaxLength="4"/>
+            </Border>
+            <Border Stroke="#28B446" StrokeThickness="1"  WidthRequest="44" HeightRequest="38" Margin="-100,225,0,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12,12,12,12" />
+                </Border.StrokeShape>
+                <Entry Margin="83,0,0,0" Keyboard="Numeric" Placeholder="MM" WidthRequest="120" PlaceholderColor="#D9D9D9" MaxLength="2"/>
+            </Border>
+            <Label Margin="270,200,0,0" Text="CVV" FontSize="15" TextColor="#868889"  />
+            <Border Stroke="#28B446" StrokeThickness="1"  WidthRequest="62" HeightRequest="38" Margin="200,225,0,0" BackgroundColor="Transparent">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12,12,12,12" />
+                </Border.StrokeShape>
+                <Entry Margin="60,0,0,0" Keyboard="Numeric" WidthRequest="120" PlaceholderColor="#D9D9D9" MaxLength="3"/>
+            </Border>
         </Grid>
-        <Button Margin="0,480,0,0" Text="Save" FontSize="16" WidthRequest="345" HeightRequest="55" BackgroundColor="#28B446" HorizontalOptions="CenterAndExpand" />
+        <Image Margin="40,10,0,0"
+               Source="visa"
+               HorizontalOptions="Start"
+               WidthRequest="66"
+               HeightRequest="41"/>
+        <Button Margin="0,350,0,0" Text="Save" FontSize="16" WidthRequest="345" HeightRequest="55" BackgroundColor="#28B446" HorizontalOptions="CenterAndExpand" />
     </VerticalStackLayout>
 
 </ContentPage>

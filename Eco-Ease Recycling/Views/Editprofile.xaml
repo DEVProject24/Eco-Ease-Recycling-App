@@ -4,15 +4,15 @@
              x:Class="Eco_Ease_Recycling.Views.Editprofile"
              Shell.NavBarIsVisible="False"
              Title="Editprofile">
+    
     <VerticalStackLayout>
         <Grid>
             <ImageButton Aspect="AspectFit"
-                   Margin="16,20,0,0"
-                   Clicked="Back_Clicked"
-                   HeightRequest="14.79"
-                   WidthRequest="14"
-                   Source="back.png"
-                   HorizontalOptions="Start"/>
+                       Margin="16,20,0,0"
+                       HeightRequest="14.79"
+                       WidthRequest="14"
+                       Source="back.png"
+                       HorizontalOptions="Start"/>
             <Label Margin="23,22,0,0"
                    FontFamily="AnybodyRegular"
                    FontSize="16"
@@ -87,8 +87,14 @@
                    WidthRequest="23.48"
                    HeightRequest="20.89"/>
         </Grid>
+        <Label Margin="20,10,0,0"
+               FontFamily="AnybodyRegular"
+               FontSize="13"
+               HorizontalTextAlignment="Start"
+               Text="Delete Account"
+               TextColor="#FF1212"/>
         <Button
-               Margin="16,400,16,0"
+               Margin="16,390,16,0"
                BackgroundColor="#22BA43"
                HeightRequest="50"
                CornerRadius="4"

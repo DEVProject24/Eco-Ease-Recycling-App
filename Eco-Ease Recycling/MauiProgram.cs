@@ -6,6 +6,8 @@ using Firebase.Auth;
 using Firebase.Auth.Providers;
 using Firebase.Database;
 using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Handlers;
+using Microsoft.Maui.Graphics;
 using Syncfusion.Maui.Core.Hosting;
 using ZXing.Net.Maui.Controls;
 using Location = Eco_Ease_Recycling.Views.Location;
@@ -46,6 +48,13 @@ namespace Eco_Ease_Recycling
                 Providers = [new EmailProvider()]
 
             }));
+
+            EntryHandler.Mapper.AppendToMapping("NoUnderline", (handler, view) =>
+            {
+#if ANDROID
+            handler.PlatformView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Android.Graphics.Color.Argb(0, 0, 0, 0));
+#endif
+            });
 
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<CreateAccount>();
