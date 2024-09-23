@@ -2,6 +2,7 @@
 using Firebase.Database;
 using Eco_Ease_Recycling.ViewModels;
 using static System.Net.Mime.MediaTypeNames;
+using CommunityToolkit.Maui.Views;
 
 namespace Eco_Ease_Recycling.Views;
 
@@ -17,7 +18,32 @@ public partial class Homepage : ContentPage
         LoadTipsAsync();
         //BindingContext = vm;
     }
+    private async void OnPlasticButton(object sender, EventArgs e)
+    {
+        var popup = new Materialpopup();
+        await this.ShowPopupAsync(popup);
+    }
+    private async void OnPaperButton(object sender, EventArgs e)
+    {
+        var popup = new PaperInfo();
+        await this.ShowPopupAsync(popup);
+    }
+    private async void OnBoxButton(object sender, EventArgs e)
+    {
+        var popup = new CardboardInfo();
+        await this.ShowPopupAsync(popup);
+    }
+    private async void OnGlassButton(object sender, EventArgs e)
+    {
+        var popup = new GlassInfo();
+        await this.ShowPopupAsync(popup);
+    }
 
+    private async void OnMetalButton(object sender, EventArgs e)
+    {
+        var popup = new MetalInfo();
+        await this.ShowPopupAsync(popup);
+    }
     //[RelayCommand]
     //      private async Task NavigatetoLocation()
     //      {
@@ -97,4 +123,6 @@ public partial class Homepage : ContentPage
     //{
     //	var result = _firebaseClient.Child("Tips").Child("description");
     //}
+
+    
 }

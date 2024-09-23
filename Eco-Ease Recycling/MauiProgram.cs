@@ -8,6 +8,7 @@ using Firebase.Database;
 using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Graphics;
+using CommunityToolkit.Maui;
 using Syncfusion.Maui.Core.Hosting;
 using ZXing.Net.Maui.Controls;
 using Location = Eco_Ease_Recycling.Views.Location;
@@ -23,6 +24,7 @@ namespace Eco_Ease_Recycling
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .UseMauiMaps()
                 .ConfigureSyncfusionCore()
                 .ConfigureFonts(fonts =>

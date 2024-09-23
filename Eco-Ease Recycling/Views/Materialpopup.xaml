@@ -2,18 +2,19 @@
 <toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-               x:Class="Eco_Ease_Recycling.Views.PaperInfo">
+               x:Class="Eco_Ease_Recycling.Views.Materialpopup">
 
     <VerticalStackLayout BackgroundColor="#28B446" Padding="20" WidthRequest="339" HeightRequest="253">
-        <Label Text="Recycling Paper"
+        <Label 
+               Text="Recycling Plastic"
                TextColor="#FFFFFF"
                FontSize="16"
                FontAttributes="Bold"/>
         <Label Margin="0,10,0,0"
-               Text="Paper is a material made from cellulose pulp derived from wood, rags, or grasses. It is used extensively for writing, printing, packaging, and cleaning. Recycling paper reduces the need for virgin wood pulp, thereby conserving forests and reducing energy consumption &#x0A;&#x0A;Paper is one of the most recyclable materials. Discover how you can contribute to reducing deforestation by recycling paper."
+               Text="Plastic is a synthetic material made from a wide range of organic polymers such as polyethylene, PVC, and nylon. It is used in countless products from bottles and bags to toys and medical devices &#x0A;&#x0A;Due to its durability, plastic waste can persist in the environment for centuries,posing significant challenges to waste management and marine ecosystems."
                TextColor="#FFFFFF"
-               FontSize="11" />
-        <Button Margin="170,18,0,0"
+               FontSize="12" />
+        <Button Margin="170,10,0,0"
                 WidthRequest="107"
                 HeightRequest="33"
                 BackgroundColor="#DEDEE3"
