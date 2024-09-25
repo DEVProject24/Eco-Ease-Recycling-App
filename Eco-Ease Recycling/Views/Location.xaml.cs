@@ -9,10 +9,11 @@ namespace Eco_Ease_Recycling.Views;
 
 public partial class Location : ContentPage
 {
-    public  ObservableCollection<Pin> _pins = new(); // Displayed pins on the map
-    public  List<Pin> _allPins = new(); // Full list of pins (used for search filtering)
-    public  GeolocationRequest _geolocationRequest = new(GeolocationAccuracy.High, TimeSpan.FromSeconds(10));
-
+    public ObservableCollection<Pin> _pins = new(); // Displayed pins on the map
+    public List<Pin> _allPins = new(); // Full list of pins (used for search filtering)
+    public GeolocationRequest _geolocationRequest = new(GeolocationAccuracy.High, TimeSpan.FromSeconds(10));
+    private DateTime _lastTapTime;
+    private Pin _lastTappedPin;
     public Location()
     {
         InitializeComponent();
@@ -26,7 +27,13 @@ public partial class Location : ContentPage
 
         // Hook up the search bar text changed event
         SearchBar.TextChanged += SearchBar_TextChanged;
+
+        //map.MapClicked += OnMapClicked;
+        
+
     }
+
+
 
     // Search bar event handler to filter pins based on search input
     private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
@@ -95,6 +102,8 @@ public partial class Location : ContentPage
                     Address = "3 Melrose Blvd, Melrose, Johannesburg, 2196",
                     Location = new Microsoft.Maui.Devices.Sensors.Location(-26.135185217668344, 28.068385923194175)
                 },
+
+
                 new Pin
                 {
                     Label = "Mpact Recycling Newtown (BRJ)",
@@ -136,13 +145,29 @@ public partial class Location : ContentPage
                     Label = "Mpact Paper Springs",
                     Address = "82-84 Steel Rd, New Era, Springs, 1559",
                     Location = new Microsoft.Maui.Devices.Sensors.Location(-26.25885047207088, 28.40626387959999)
-                }
-            };
+                },
+
+
+         };
+
+        foreach (var pin in recyclingCenters)
+        {
+           
+            pin.MarkerClicked += OnPinClicked;
+            _allPins.Add(pin);
+
+           
+        }
 
         //Add all pins to both _allPins(for search) and _pins(for initial display)
-            _allPins.AddRange(recyclingCenters);
+        _allPins.AddRange(recyclingCenters);
         UpdateMapPins(recyclingCenters);
     }
+
+    //private void OnInfoWindowClicked(object? sender, PinClickedEventArgs e)
+    //{
+    //    throw new NotImplementedException();
+    //}
 
     protected override void OnAppearing()
     {
@@ -166,7 +191,7 @@ public partial class Location : ContentPage
         Shell.Current.GoToAsync("//QRScan");
     }
 
-    
+
     private void ProfileButton_Clicked(object sender, EventArgs e)
     {
         Shell.Current.GoToAsync("//Profilepage");
@@ -177,4 +202,114 @@ public partial class Location : ContentPage
         Shell.Current.GoToAsync("//Walletpage");
     }
 
+    //private async void OnMapClicked(object sender, MapClickedEventArgs e)
+    //{
+    //    // If last tap is on the same pin within a short duration, consider it a double-tap
+    //    if (_lastTappedPin != null && DateTime.Now - _lastTapTime < TimeSpan.FromMilliseconds(500))
+    //    {
+    //        // Open Google Maps for directions
+    //        await OpenGoogleMaps(_lastTappedPin.Location);
+    //    }
+    //    else
+    //    {
+    //        // Save this as the last tap
+    //        _lastTapTime = DateTime.Now;
+    //        _lastTappedPin = null;
+
+    //        // Check if tap was on a pin
+    //        foreach (var pin in _pins)
+    //        {
+    //            if (IsTapOnPin(e.Location, pin.Location))
+    //            {
+    //                _lastTappedPin = pin;
+    //                break;
+    //            }
+    //        }
+    //    }
+    //}
+
+    //private bool IsTapOnPin(Microsoft.Maui.Devices.Sensors.Location tapLocation, Microsoft.Maui.Devices.Sensors.Location pinLocation)
+    //{
+    //    const double tolerance = 0.0005;  // Adjust tolerance as needed for map zoom level
+    //    return Math.Abs(tapLocation.Latitude - pinLocation.Latitude) < tolerance
+    //           && Math.Abs(tapLocation.Longitude - pinLocation.Longitude) < tolerance;
+    //}
+
+    //private async Task OpenGoogleMaps(Microsoft.Maui.Devices.Sensors.Location location)
+    //{
+    //    var latitude = location.Latitude;
+    //    var longitude = location.Longitude;
+    //    var googleMapsUrl = $"https://www.google.com/maps/dir/?api=1&destination={latitude},{longitude}";
+
+    //    // Open Google Maps
+    //    await Launcher.OpenAsync(new Uri(googleMapsUrl));
+    //}
+
+    //Event handler for pin taps
+    //private DateTime _lastTapTimePin;
+    //private Pin _lastTappedPinForGoogleMaps;
+
+    //private async void OnPinClicked(object sender, PinClickedEventArgs e)
+    //{
+    //    var currentTime = DateTime.Now;
+
+    //    if (_lastTappedPinForGoogleMaps == sender && (currentTime - _lastTapTimePin).TotalMilliseconds < 500)
+    //    {
+    //        // Double-tap detected, open Google Maps for directions
+    //        var pin = (Pin)sender;
+    //        await OpenGoogleMaps(pin.Location);
+    //    }
+    //    else
+    //    {
+    //        _lastTapTimePin = currentTime;
+    //        _lastTappedPinForGoogleMaps = (Pin)sender;
+    //    }
+
+    //    // Prevent further propagation of the click event
+    //    e.HideInfoWindow = false;  // You can remove this if you want the info window to show
+    //}
+
+    //private async void OnInfoWindowClicked(object sender, PinClickedEventArgs e)
+    //{
+    //    var pin = sender as Pin;
+    //    if (pin != null)
+    //    {
+    //        // Get user's current location
+    //        var location = await Geolocation.Default.GetLocationAsync(_geolocationRequest);
+    //        if (location != null)
+    //        {
+    //            // Create Google Maps URL with directions from current location to pin location
+    //            var googleMapsUrl = $"https://www.google.com/maps/dir/?api=1&origin={location.Latitude},{location.Longitude}&destination={pin.Location.Latitude},{pin.Location.Longitude}";
+    //            await Launcher.OpenAsync(new Uri(googleMapsUrl));
+    //        }
+    //        else
+    //        {
+    //            await DisplayAlert("Error", "Unable to retrieve current location.", "OK");
+    //        }
+    //    }
+    //    e.HideInfoWindow = false; // Optionally, set to true if you don't want to show the pin info window again
+    //}
+
+
+
+    private async void OnPinClicked(object sender, PinClickedEventArgs e)
+    {
+        if (sender is Pin pin)
+        {
+            // Get the user's current location
+            var location = await Geolocation.Default.GetLocationAsync(_geolocationRequest);
+            if (location != null)
+            {
+                var googleMapsUrl = $"https://www.google.com/maps/dir/?api=1&origin={location.Latitude},{location.Longitude}&destination={pin.Location.Latitude},{pin.Location.Longitude}";
+
+                // Open Google Maps
+                await Launcher.OpenAsync(new Uri(googleMapsUrl));
+            }
+            else
+            {
+                await DisplayAlert("Error", "Unable to retrieve current location.", "OK");
+            }
+        }
+
+    }
 }
