@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eco_Ease_Recycling.Views.ActivityDetailsPage"
+             Title="ActivityDetailsPage">
+    <VerticalStackLayout>
+        <Label Text="Recycling Activity Details"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+        <Label Text="Materials:"
+               FontAttributes="Bold" />
+        <Label x:Name="MaterialsLabel" />
+
+        <Label Text="Weight:"
+               FontAttributes="Bold" />
+        <Label x:Name="WeightLabel" />
+
+        <Label Text="Money Earned:"
+               FontAttributes="Bold" />
+        <Label x:Name="MoneyEarnedLabel" />
+
+        <Label Text="Recycling Center:"
+               FontAttributes="Bold" />
+        <Label x:Name="RecyclingCenterLabel" />
+    </VerticalStackLayout>
+</ContentPage>

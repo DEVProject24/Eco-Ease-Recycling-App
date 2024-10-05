@@ -4,6 +4,8 @@ using CommunityToolkit.Mvvm.Input;
 using Eco_Ease_Recycling.Models;
 using Eco_Ease_Recycling.Views;
 using Firebase.Auth;
+using Firebase.Database;
+using Firebase.Database.Query;
 
 namespace Eco_Ease_Recycling.ViewModels
 {
@@ -11,6 +13,7 @@ namespace Eco_Ease_Recycling.ViewModels
     {
 
         private readonly FirebaseAuthClient _firebaseAuthClient;
+        private readonly FirebaseClient _firebaseClient;
 
         [ObservableProperty]
         private LoginPageModel _loginPageModel = new();
@@ -18,9 +21,13 @@ namespace Eco_Ease_Recycling.ViewModels
 
         [ObservableProperty]
         private string _errorMessage;
-        public LoginPageViewModel(FirebaseAuthClient firebaseAuthClient)
+
+        [ObservableProperty]
+        private CreateAccountModel userModel = new();
+        public LoginPageViewModel(FirebaseAuthClient firebaseAuthClient, FirebaseClient firebaseClient)
         {
             _firebaseAuthClient = firebaseAuthClient;
+            _firebaseClient = firebaseClient;
         }
 
         [RelayCommand]
@@ -33,7 +40,29 @@ namespace Eco_Ease_Recycling.ViewModels
                 {
                     //Shell.Current.FlyoutHeader = new Profilepage(_firebaseAuthClient);
                     await Shell.Current.GoToAsync($"//{nameof(Homepage)}");
+
+                    var userID = result.User.Uid;
+
+                    var userFromDatabase = await _firebaseClient
+                        .Child("User")
+                        .Child(userID)
+                        .OnceSingleAsync<CreateAccountModel>();
+
+                    if (userFromDatabase != null)
+                    {
+                        // Store user details in UserModel
+                        userModel = new CreateAccountModel
+                        {
+                            UserID = userID,
+                            Email = result.User.Info.Email,
+
+                            UserName = result.User.Info.DisplayName
+                        };
+
+                    }
                 }
+
+                
             }
             catch (Exception ex)
             {

@@ -2,6 +2,7 @@
 using Microsoft.Maui.Controls.Maps;
 using Microsoft.Maui.Maps;
 using System.Collections.ObjectModel;
+using System.Net.NetworkInformation;
 //using Microsoft.UI.Xaml.Controls;
 //using Map = Microsoft.Maui.Controls.Maps.Map;
 
@@ -14,6 +15,7 @@ public partial class Location : ContentPage
     public GeolocationRequest _geolocationRequest = new(GeolocationAccuracy.High, TimeSpan.FromSeconds(10));
     private DateTime _lastTapTime;
     private Pin _lastTappedPin;
+    private Pin _selectedPin;
     public Location()
     {
         InitializeComponent();
@@ -29,8 +31,8 @@ public partial class Location : ContentPage
         SearchBar.TextChanged += SearchBar_TextChanged;
 
         //map.MapClicked += OnMapClicked;
+        DirectionsButton.IsEnabled = true;
         
-
     }
 
 
@@ -44,6 +46,7 @@ public partial class Location : ContentPage
         if (string.IsNullOrWhiteSpace(searchTerm))
         {
             UpdateMapPins(_allPins); // Reset to show all pins
+            
         }
         else
         {
@@ -64,6 +67,7 @@ public partial class Location : ContentPage
         foreach (var pin in pinsToShow)
         {
             _pins.Add(pin);
+            pin.MarkerClicked += OnPinClicked;
         }
     }
 
@@ -145,18 +149,19 @@ public partial class Location : ContentPage
                     Label = "Mpact Paper Springs",
                     Address = "82-84 Steel Rd, New Era, Springs, 1559",
                     Location = new Microsoft.Maui.Devices.Sensors.Location(-26.25885047207088, 28.40626387959999)
+                    
                 },
 
 
          };
 
-        foreach (var pin in recyclingCenters)
+        foreach (var pin in _allPins)
         {
            
-            pin.MarkerClicked += OnPinClicked;
+            //pin.MarkerClicked += OnPinClicked;
             _allPins.Add(pin);
-
-           
+            //pin.MarkerClicked += OnPinClicked;
+            pin.MarkerClicked += OnPinClicked;
         }
 
         //Add all pins to both _allPins(for search) and _pins(for initial display)
@@ -200,6 +205,41 @@ public partial class Location : ContentPage
     private void WalletButton_Clicked(object sender, EventArgs e)
     {
         Shell.Current.GoToAsync("//Walletpage");
+    }
+
+    private async void OnGetDirectionsClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            if (_selectedPin == null)
+            {
+                await DisplayAlert("Error", "Please select a recycling center.", "OK");
+                return;
+            }
+
+            // Get user's current location
+            var userLocation = await Geolocation.Default.GetLocationAsync(_geolocationRequest);
+
+            // Check if the user's location is available
+            if (userLocation == null)
+            {
+                await DisplayAlert("Error", "Unable to retrieve your current location.", "OK");
+                return;
+            }
+
+            // Get the selected pin's location (recycling center)
+            var centerLocation = _selectedPin.Location;
+
+            // Construct the Google Maps URL for directions
+            var googleMapsUrl = $"https://www.google.com/maps/dir/?api=1&origin={userLocation.Latitude},{userLocation.Longitude}&destination={centerLocation.Latitude},{centerLocation.Longitude}";
+
+            // Open Google Maps with the directions
+            await Launcher.OpenAsync(new Uri(googleMapsUrl));
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", $"Failed to get directions: {ex.Message}", "OK");
+        }
     }
 
     //private async void OnMapClicked(object sender, MapClickedEventArgs e)
@@ -292,24 +332,43 @@ public partial class Location : ContentPage
 
 
 
-    private async void OnPinClicked(object sender, PinClickedEventArgs e)
+    //private async void OnPinClicked(object sender, PinClickedEventArgs e)
+    //{
+    //    if (sender is Pin pin)
+    //    {
+    //        // Get the user's current location
+    //        var location = await Geolocation.Default.GetLocationAsync(_geolocationRequest);
+    //        if (location != null)
+    //        {
+    //            var googleMapsUrl = $"https://www.google.com/maps/dir/?api=1&origin={location.Latitude},{location.Longitude}&destination={pin.Location.Latitude},{pin.Location.Longitude}";
+
+    //            // Open Google Maps
+    //            await Launcher.OpenAsync(new Uri(googleMapsUrl));
+    //        }
+    //        else
+    //        {
+    //            await DisplayAlert("Error", "Unable to retrieve current location.", "OK");
+    //        }
+    //    }
+
+    //}
+
+    //private void OnPinClicked(object sender, PinClickedEventArgs e)
+    //{
+    //    _selectedPin = e.Pin; // Store the selected pin
+    //    DirectionsButton.IsEnabled = true; // Enable the directions button
+    //}
+
+    // Event handler for when a pin is clicked
+    private void OnPinClicked(object sender, EventArgs e)
     {
-        if (sender is Pin pin)
+        // The clicked pin is the sender
+        var pin = sender as Pin;
+
+        if (pin != null)
         {
-            // Get the user's current location
-            var location = await Geolocation.Default.GetLocationAsync(_geolocationRequest);
-            if (location != null)
-            {
-                var googleMapsUrl = $"https://www.google.com/maps/dir/?api=1&origin={location.Latitude},{location.Longitude}&destination={pin.Location.Latitude},{pin.Location.Longitude}";
-
-                // Open Google Maps
-                await Launcher.OpenAsync(new Uri(googleMapsUrl));
-            }
-            else
-            {
-                await DisplayAlert("Error", "Unable to retrieve current location.", "OK");
-            }
+            _selectedPin = pin; // Store the selected pin
+            DirectionsButton.IsEnabled = true; // Enable the directions button
         }
-
     }
 }

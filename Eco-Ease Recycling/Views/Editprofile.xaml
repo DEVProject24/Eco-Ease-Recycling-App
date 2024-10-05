@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Eco_Ease_Recycling.ViewModels"
+             xmlns:m="clr-namespace:Eco_Ease_Recycling.Models"
              x:Class="Eco_Ease_Recycling.Views.Editprofile"
+             
              Shell.NavBarIsVisible="False"
              Title="Editprofile">
     
@@ -12,6 +15,7 @@
                        HeightRequest="14.79"
                        WidthRequest="14"
                        Source="back.png"
+                         Clicked="Profile_Clicked"
                        HorizontalOptions="Start"/>
             <Label Margin="23,22,0,0"
                    FontFamily="AnybodyRegular"
@@ -31,11 +35,13 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5,5,5,5" />
                 </Border.StrokeShape>
-                <Entry Margin="40,55,0,0"
+                <Entry x:Name="usernameEntry"
+                    Margin="40,55,0,0"
                      Grid.Column="1"
                      WidthRequest="300"
                      BackgroundColor="Transparent"
                      Placeholder=" Username"
+                     
                      PlaceholderColor="#868889"
                      VerticalOptions="Center"/>
             </Border>
@@ -45,11 +51,13 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5,5,5,5" />
                 </Border.StrokeShape>
-                <Entry Margin="40,10,0,0"
+                <Entry x:Name="emailEntry"
+                    Margin="40,10,0,0"
                          Grid.Column="1"
                          WidthRequest="300"
                          BackgroundColor="Transparent"
                          Placeholder=" Email Address"
+                         
                          PlaceholderColor="#797979"
                          VerticalOptions="Center"/>
             </Border>
@@ -65,12 +73,14 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5,5,5,5" />
                 </Border.StrokeShape>
-                <Entry Margin="40,10,0,0"
+                <Entry x:Name="passwordEntry"
+                    Margin="40,10,0,0"
                  Grid.Column="1"
                  WidthRequest="300"
                  BackgroundColor="Transparent"
                  IsPassword="True"
                  Placeholder="password"
+                 
                  PlaceholderColor="#797979"
                  VerticalOptions="Center"/>
             </Border>
@@ -100,6 +110,8 @@
                CornerRadius="4"
                FontFamily="AnybodyRegular"
                FontSize="16"
-               Text="Log Out"/>
+               Text="Update Profile"
+               Clicked="OnUpdateProfileClicked"/>
+        
     </VerticalStackLayout>
 </ContentPage>

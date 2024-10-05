@@ -3,6 +3,8 @@ using Eco_Ease_Recycling.Models;
 using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Newtonsoft.Json;
+using System.Globalization;
 
 
 namespace Eco_Ease_Recycling.Views;
@@ -10,21 +12,21 @@ namespace Eco_Ease_Recycling.Views;
 public partial class QRScan : ContentPage
 {
     private bool isProcessingQRCode = false;
-    private FirebaseClient firebaseClient;
-    private readonly FirebaseAuthClient authClient;
-    private string userId;
+    private FirebaseClient _firebaseClient;
+    private readonly FirebaseAuthClient _authClient;
+    private string _userId;
 
-    public QRScan()
+    public QRScan(FirebaseAuthClient authClient, FirebaseClient firebaseClient)
     {
         InitializeComponent();
-        //authClient = firebaseAuthClient;
-        //firebaseClient = new FirebaseClient("https://eco-ease-5e1f9-default-rtdb.firebaseio.com/");
+        _authClient = authClient;
+        _firebaseClient = firebaseClient;
 
 
-        //if (!string.IsNullOrWhiteSpace(authClient?.User?.Info?.Email))
-        //{
-        //    userId = authClient.User.Uid;
-        //}
+        if (!string.IsNullOrWhiteSpace(authClient?.User?.Info?.Email))
+        {
+            _userId = authClient.User.Uid;
+        }
         // Initialize barcode reader options
         barcodeReader.Options = new ZXing.Net.Maui.BarcodeReaderOptions
         {
@@ -41,69 +43,129 @@ public partial class QRScan : ContentPage
 
     private async void barcodeReader_BarcodesDetected(object? sender, ZXing.Net.Maui.BarcodeDetectionEventArgs e)
     {
-        var first = e.Results?.FirstOrDefault();
-        if (first is null)
+        if (isProcessingQRCode)
             return;
 
-        // Use the main thread dispatcher to display the alert
-        await Dispatcher.DispatchAsync(async () =>
+        isProcessingQRCode = true;
+
+        var first = e.Results?.FirstOrDefault();
+        if (first is null)
         {
-            await DisplayAlert("Barcode Detected", first.Value, "OK");
-        });
-
-        //if (isProcessingQRCode)
-        //    return;
-
-        //isProcessingQRCode = true;
-
-        ////var qrData = e.Results.FirstOrDefault()?.Value;
-        //string qrData = e.Results[0].Value;
-        //var scanID = qrData[0];
-        //var materials = qrData[1];
-        //var weight = qrData[2];
-        //double moneyEarned = qrData[3];
-
-        //// Create new recycling activity
-        //var newActivity = new RecyclingActivityModel
-        //{
-        //    //ActivityID = Guid.NewGuid().ToString(),
-        //    Date = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
-        //    //LocationID = "L_UNKNOWN",  // Location ID can be set based on your logic
-        //    Materials = Char.ToString(materials),
-        //    MoneyEarned = moneyEarned,
-        //    //ScanID = "Sc_" + Guid.NewGuid().ToString(),  // Generate a unique scan ID
-        //    UserId = userId,
-        //    Weight = weight
-        // };
-
-        //    if (qrData != null)
-        //    {
-        //        try
-        //        {
-        //            //var recyclingData = Newtonsoft.Json.JsonConvert.DeserializeObject<RecyclingActivityModel>(qrData);
-
-        //            await SaveRecyclingActivity(newActivity);
-
-        //            await DisplayAlert("Success", "Recycling activity recorded.", "OK");
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            await DisplayAlert("Error", $"Could not process QR code: {ex.Message}", "OK");
-
-        //        }
-        //    }
-        //    isProcessingQRCode = false;
-        //}
-
-        //private async Task SaveRecyclingActivity(RecyclingActivityModel activity)
-        //{
+            isProcessingQRCode = false;
+            return;
+        }
 
 
-        //    await firebaseClient
-        //    .Child("RecyclingActivity")
-        //    .Child("user_id")
-        //    .PostAsync(activity);
-        //}
+       // Use the main thread dispatcher to display the alert
+       await Dispatcher.DispatchAsync(async () =>
+       {
+           await DisplayAlert("QR Code Detected", first.Value, "OK");
+       });
+
+
+
+        string qrData = first.Value;
+
+        try
+        {
+            
+            var qrParts = qrData.Split(',');
+
+            //if (qrParts.Length != 5)
+            //{
+            //    await DisplayAlert("Error", "Invalid QR code format.", "OK");
+            //    isProcessingQRCode = false;
+            //    return;
+            //}
+
+            // Extract data from QR code
+            var activityID = qrParts[0];
+            var location = qrParts[4];
+            //var scanID = qrParts[1];
+            var materials = qrParts[1];
+
+            double moneyEarned;
+            double weight;
+
+            if (!double.TryParse(qrParts[2], NumberStyles.Any, CultureInfo.InvariantCulture, out weight))
+            {
+                await DisplayAlert("Error", "Invalid number format for money earned.", "OK");
+                return; // Exit if the parsing fails
+            }
+
+            if (!double.TryParse(qrParts[3], NumberStyles.Any, CultureInfo.InvariantCulture, out moneyEarned))
+            {
+                await DisplayAlert("Error", "Invalid number format for money earned.", "OK");
+                return; // Exit if the parsing fails
+            }
+
+
+
+            // Create new recycling activity
+            var newActivity = new RecyclingActivityModel
+            {
+
+                Date = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
+                //LocationID = "L_UNKNOWN",  // Location ID can be set based on your logic
+                Materials = materials,
+                MoneyEarned = moneyEarned,
+                //ActivityID = "Sc_" + Guid.NewGuid().ToString(),  // Generate a unique scan ID
+                ActivityId = activityID,
+                UserId = _userId,
+                Weight = weight,
+                LocationID = location
+            };
+
+            //Save the activity to Firebase Realtime Database
+            await SaveRecyclingActivity(newActivity);
+
+
+
+        }
+        catch (Exception ex) 
+        {
+            await DisplayAlert("Error", $"Could not process QR code: {ex.Message}", "OK");
+        }
+
+        isProcessingQRCode = false;
+        
+    }
+
+    
+
+    
+private async Task SaveRecyclingActivity(RecyclingActivityModel activity)
+    {
+        try
+        {
+
+            await _firebaseClient
+            .Child("RecyclingActivity")
+            
+            .Child(activity.ActivityId)
+            .PutAsync(JsonConvert.SerializeObject(activity));
+
+            string materials = activity.Materials ?? "Unknown";
+            string weight = activity.Weight.ToString() ?? "0";
+            string moneyEarned = activity.MoneyEarned.ToString() ?? "0";
+            string recyclingCenter = activity.LocationID ?? "Unknown";
+
+            //Show success message and display the activity details
+            //await DisplayAlert("Success", "Nice", "OK");
+            //    "Recycling activity recorded.\n\n" +
+            //    "Materials: {materials}\n" +
+            //    "Weight: {weight}kg\n" +
+            //    "Money Earned: R{moneyEarned}\n" +
+            //    "Recycling Center: {recyclingCenter}",
+            //    "OK");
+
+            // Navigate to the Activity Details Page with the activity details
+            
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", $"Failed to save activity: {ex.Message}", "OK");
+        }
     }
 
     private void LocationButton_Clicked(object sender, EventArgs e)

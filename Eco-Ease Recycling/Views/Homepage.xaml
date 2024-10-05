@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Eco_Ease_Recycling.Views.Homepage"
+             xmlns:vm="clr-namespace:Eco_Ease_Recycling.ViewModels"
+             x:DataType="vm:HomePageViewModel"
              Shell.NavBarIsVisible="False"
              Title="Homepage">
 
@@ -14,8 +16,9 @@
                 WidthRequest="228"
                 VerticalOptions="Start" 
                 HorizontalOptions="Start" />
-            <Label Margin="95,0,0,0"
-                    Text="Jenny"
+            <Label x:Name="UserName"
+                   
+                Margin="95,0,0,0"
                     FontSize="20"
                     TextColor="#22BA43"
                     WidthRequest="228"
@@ -209,11 +212,12 @@
                     WidthRequest="31.26"
                     VerticalOptions="Center" 
                     HorizontalOptions="Start" />
-            <Image Margin="150,614,0,0"
+            <ImageButton Margin="150,614,0,0"
                    Aspect="AspectFit"
                    HeightRequest="32"
                    WidthRequest="32"
                    Source="wallet.png"
+                   Clicked="Wallet_Clicked"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
             <Label  Margin="258,643,0,0"
@@ -240,7 +244,7 @@
                     HorizontalOptions="Start" />
             <Label Margin="40,542,0,0"
                    x:Name="TipsLabel"
-                   Text="Flatten plastic bottles before recycling them"
+                   
                    FontSize="12"
                    WidthRequest="258"
                    TextTransform="Default"

@@ -8,13 +8,15 @@ namespace Eco_Ease_Recycling.Models
 {
     public class RecyclingActivityModel
     {
+        public string ActivityId { get; set; }
         public string Date {  get; set; }
+        public string LocationID { get; set; }
         public string Materials { get; set; }
 
         public double MoneyEarned { get; set; }
         public string UserId { get; set; }
         public double Weight { get; set; }
-
         
+
     }
 }

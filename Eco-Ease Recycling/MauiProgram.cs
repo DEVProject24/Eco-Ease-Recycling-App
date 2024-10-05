@@ -81,6 +81,10 @@ namespace Eco_Ease_Recycling
             builder.Services.AddSingleton<HistoryPage>();
             builder.Services.AddSingleton<Walletpage>();
             builder.Services.AddSingleton<AddCard>();
+            builder.Services.AddSingleton<Editprofile>();
+            builder.Services.AddSingleton<EditProfileViewModel>();
+            builder.Services.AddSingleton<ActivityDetailsPage>();
+
 
 
 

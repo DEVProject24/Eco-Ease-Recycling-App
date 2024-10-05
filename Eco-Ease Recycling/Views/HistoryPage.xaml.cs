@@ -6,6 +6,7 @@ public partial class HistoryPage : ContentPage
     public HistoryPage()
     {
         InitializeComponent();
+        
     }
 
     private void Back_Clicked(object sender, EventArgs e)
@@ -35,6 +36,11 @@ public partial class HistoryPage : ContentPage
     }
 
     private void WalletButton_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("//Walletpage");
+    }
+
+    private void Overview_Clicked(object sender, EventArgs e)
     {
         Shell.Current.GoToAsync("//Walletpage");
     }

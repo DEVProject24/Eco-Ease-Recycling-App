@@ -8,7 +8,9 @@
 
     <VerticalStackLayout>
         <Grid BackgroundColor="White" >
-            <maps:Map x:Name ="map"  IsShowingUser="True" WidthRequest="410" HeightRequest="572" Margin="0,-210,0,0">
+            <maps:Map x:Name ="map"  IsShowingUser="True" WidthRequest="410" HeightRequest="572" Margin="0,-210,0,0"
+                      
+                      >
                 <maps:Map.ItemTemplate>
                     <DataTemplate x:DataType="maps:Pin">
                         <maps:Pin Location="{Binding Location}"
@@ -17,6 +19,14 @@
                     </DataTemplate>
                 </maps:Map.ItemTemplate>
             </maps:Map>
+            <!-- Button to get directions -->
+            <Button x:Name="DirectionsButton"
+                Text="Get Directions"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Clicked="OnGetDirectionsClicked"
+                    IsEnabled="True"/>
+
             <Label Margin="25,25,0,0"
                 Text="Map"
                 FontSize="30"
@@ -33,11 +43,11 @@
                 WidthRequest="228"
                 VerticalOptions="Start" 
                 HorizontalOptions="Start" />
-            <Switch Margin="0,-673,0,0"
+            <!--<Switch Margin="0,-673,0,0"
                 x:Name="toggleSwitch"
                 IsToggled="false"
                 OnColor="Green"
-                ThumbColor="White" />
+                ThumbColor="White" />-->
             <RoundRectangle Margin="-1,480,0,0"
                                 Fill="#fff"
                                 StrokeThickness="4"

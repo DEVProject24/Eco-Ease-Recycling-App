@@ -87,6 +87,6 @@ public partial class Profilepage : ContentPage
 
     private void WalletButton_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//Walletpage");
+        Shell.Current.GoToAsync("//AddCard");
     }
 }

@@ -6,7 +6,8 @@
              Title="AddCard">
     <VerticalStackLayout>
         <Grid>
-            <Image Aspect="AspectFit"
+            <ImageButton Aspect="AspectFit"
+            Clicked="Profile_Clicked"
            Margin="16,20,0,0"
            HeightRequest="14.79"
            WidthRequest="14"
@@ -25,7 +26,7 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12,12,12,12" />
                 </Border.StrokeShape>
-                <Entry Margin="0,0,0,0" Keyboard="Text" BackgroundColor="Transparent"  >
+                <Entry x:Name="CardHolderNameEntry" Margin="0,0,0,0" Keyboard="Text" BackgroundColor="Transparent"  >
                     <Entry.PlaceholderColor>
                         <OnPlatform x:TypeArguments="Color">
                             <On Platform="iOS" Value="#868889" />
@@ -40,7 +41,7 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12,12,12,12" />
                 </Border.StrokeShape>
-                <Entry Margin="0,0,0,0" Keyboard="Numeric" BackgroundColor="Transparent" MaxLength="16" >
+                <Entry x:Name="CardNumberEntry" Margin="0,0,0,0" Keyboard="Numeric" BackgroundColor="Transparent" MaxLength="16" >
                     <Entry.PlaceholderColor>
                         <OnPlatform x:TypeArguments="Color">
                             <On Platform="iOS" Value="#868889" />
@@ -55,7 +56,7 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12,12,12,12" />
                 </Border.StrokeShape>
-                <Entry Margin="70,0,0,0" Keyboard="Numeric" Placeholder="YYYY" WidthRequest="120" PlaceholderColor="#D9D9D9" MaxLength="4"/>
+                <Entry x:Name="ExpiryDateEntry" Margin="70,0,0,0" Keyboard="Numeric" Placeholder="YYYY" WidthRequest="120" PlaceholderColor="#D9D9D9" MaxLength="4"/>
             </Border>
             <Border Stroke="#28B446" StrokeThickness="1"  WidthRequest="44" HeightRequest="38" Margin="-100,225,0,0">
                 <Border.StrokeShape>
@@ -68,7 +69,7 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12,12,12,12" />
                 </Border.StrokeShape>
-                <Entry Margin="60,0,0,0" Keyboard="Numeric" WidthRequest="120" PlaceholderColor="#D9D9D9" MaxLength="3"/>
+                <Entry x:Name="CvvEntry" Margin="60,0,0,0" Keyboard="Numeric" WidthRequest="120" PlaceholderColor="#D9D9D9" MaxLength="3"/>
             </Border>
         </Grid>
         <Image Margin="40,10,0,0"
@@ -76,7 +77,7 @@
                HorizontalOptions="Start"
                WidthRequest="66"
                HeightRequest="41"/>
-        <Button Margin="0,350,0,0" Text="Save" FontSize="16" WidthRequest="345" HeightRequest="55" BackgroundColor="#28B446" HorizontalOptions="CenterAndExpand" />
+        <Button Margin="0,350,0,0" Text="Save" Clicked="OnAddCardClicked" FontSize="16" WidthRequest="345" HeightRequest="55" BackgroundColor="#28B446" HorizontalOptions="CenterAndExpand" />
     </VerticalStackLayout>
 
 </ContentPage>

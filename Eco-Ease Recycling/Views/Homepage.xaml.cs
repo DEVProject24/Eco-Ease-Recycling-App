@@ -3,19 +3,32 @@ using Firebase.Database;
 using Eco_Ease_Recycling.ViewModels;
 using static System.Net.Mime.MediaTypeNames;
 using CommunityToolkit.Maui.Views;
+using Firebase.Auth;
+using Microsoft.Maui.Controls;
 
 namespace Eco_Ease_Recycling.Views;
 
 public partial class Homepage : ContentPage
 {
     private readonly FirebaseClient _firebaseClient;
-    public Homepage(FirebaseClient firebaseClient)
+    private readonly FirebaseAuthClient _authClient;
+    public Homepage(FirebaseClient firebaseClient, FirebaseAuthClient firebaseAuthClient)
     {
         InitializeComponent();
         BindingContext = this;
         _firebaseClient = firebaseClient;
+        _authClient = firebaseAuthClient;
         _tipsService = new TipsService();
+        BindingContext = new HomePageViewModel(firebaseAuthClient, firebaseClient);
         LoadTipsAsync();
+
+
+
+        if (!string.IsNullOrWhiteSpace(_authClient?.User?.Info?.DisplayName))
+        {
+            UserName.Text = _authClient?.User?.Info?.DisplayName;
+        }
+        LoadUserProfile();
         //BindingContext = vm;
     }
     private async void OnPlasticButton(object sender, EventArgs e)
@@ -100,7 +113,7 @@ public partial class Homepage : ContentPage
 
     private void StartTipRotation()
     {
-        Device.StartTimer(TimeSpan.FromSeconds(TipIntervalSeconds), () =>
+        Microsoft.Maui.Controls.Application.Current.Dispatcher.StartTimer(TimeSpan.FromSeconds(TipIntervalSeconds), () =>
         {
             DisplayNextTip();
             return true;  // Repeat the timer
@@ -119,10 +132,21 @@ public partial class Homepage : ContentPage
         _currentTipIndex = (_currentTipIndex + 1) % _tips.Count;
     }
 
-    //private async Task LoadTipsAsync()
-    //{
-    //	var result = _firebaseClient.Child("Tips").Child("description");
-    //}
+    private void Wallet_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("//Walletpage");
+    }
 
     
+    public async void LoadUserProfile()
+    {
+        if (!string.IsNullOrWhiteSpace(_authClient?.User?.Info?.DisplayName))
+        {
+            UserName.Text = _authClient?.User?.Info?.DisplayName;
+        }
+        else
+        {
+            await DisplayAlert("Error", "User is not logged in", "OK");
+        }
+    }
 }

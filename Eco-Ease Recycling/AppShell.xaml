@@ -77,4 +77,12 @@ Route="Location" />
 Title="Editprofile"
 ContentTemplate="{DataTemplate views:Editprofile}"
 Route="Editprofile" />
+
+    <ShellContent
+ Title="ActivityDetailsPage"
+ ContentTemplate="{DataTemplate views:ActivityDetailsPage}"
+ Route="ActivityDetailsPage"/>
 </Shell>
+    
+   
+    

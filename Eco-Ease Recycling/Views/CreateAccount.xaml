@@ -49,7 +49,7 @@
                      Placeholder=" Username"
                     
                      PlaceholderColor="Gray"
-                        Text="{Binding CreateAccountModel.Username}"
+                        Text="{Binding CreateAccountModel.UserName}"
                      VerticalOptions="Center"/>
                 </Border>
             </Grid>
